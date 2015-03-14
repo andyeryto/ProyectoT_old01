@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:v="http://validators.epn.edu.ec.com">
+	<ui:define name="pageTitle">Subir artículo digitalizado</ui:define>
+	<ui:define name="pageHeader">Subir artículo digitalizado</ui:define>
+	<ui:define name="body">
+		<p:growl id="messages" showDetail="true" widgetVar="msgsUploading" />
+
+		<p:panel header="Documento digitalizado del artículo"
+			styleClass="myPanelCentrado">
+			<center>
+				<h:form id="uploadForm" enctype="multipart/form-data">
+					<p:fileUpload
+						fileUploadListener="#{articulosBackingBean.handleFileUpload}"
+						mode="advanced" update="@this,:messages"
+						allowTypes="/(\.|\/)(doc|docx|pdf)$/" label="Selección de archivo"
+						uploadLabel="Enviar archivo" cancelLabel="Cancelar"
+						invalidFileMessage="El archivo no concuerda con los tipos soportados" />
+
+				</h:form>
+				
+				<h:form>
+					<p:commandLink action="registroDocumentoArticulo" ajax="false">
+						<p:graphicImage value="/images/ATRAS.png" title="Atrás" width="35"
+							height="35" />
+					</p:commandLink>
+				</h:form>
+			</center>
+		</p:panel>
+	</ui:define>
+
+</ui:composition>

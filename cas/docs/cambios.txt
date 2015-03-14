@@ -1,0 +1,14 @@
+Los cambios que se efectuarion sobre el proyecto original fueron:
+  1) Se adaptó a la estructura de proyectos Web de Eclipse
+  2) En el archivo "WebContent/WEB-INF/deployerConfigContext.xml" se comentó el handler original y se configuró la vesión personalizada para autenticación de la EPN (datos en tabla de BDD, password encriptados):
+		<property name="authenticationHandlers">
+			<list>
+				<bean class="org.jasig.cas.authentication.handler.support.HttpBasedServiceCredentialsAuthenticationHandler"	p:httpClient-ref="httpClient" />
+				<bean class="ec.edu.epn.cas.bdd.AutenticacionBDD" />
+				<!-- bean
+					class="org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler" /-->
+			</list>
+		</property>
+  3) Se incluyó carpeta de documentación
+  4) Se incluyó carpeta Jboss-config en donde se colocó el archivo de data source.
+  5) Se modificó los archivos: cas.css, casLoginView.jsp, top.jsp, bottom.jsp, messages_es.properties

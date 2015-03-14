@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:v="http://validators.epn.edu.ec.com">
+
+	<ui:define name="pageTitle">Consulta Revisores</ui:define>
+	<ui:define name="body">
+		<center style="display: block; text-align: -webkit-center;">
+			<h:form>
+				<h:panelGrid style="border:1px solid #CAD6E0;" columns="1">
+					<p:commandLink action="#{revisorControlador.toRegistroRevisor}"
+						ajax="false">
+						<p:graphicImage value="/images/NUEVO3.png" title="Nuevo Revisor" />
+					</p:commandLink>
+				</h:panelGrid>
+			</h:form>
+		</center>
+		<br />
+
+
+		<center style="display: block; text-align: -webkit-center;">
+			<h:form id="searchFormRevisor">
+				<p:panel header="Buscar Revisor" style="width:500px;">
+					<h:panelGrid columns="2">
+
+
+						<h:outputText value="Por identificacion " />
+						<h:panelGroup>
+							<p:inputText id="identificacionR"
+								value="#{revisorControlador.identificacionConsulta}" size="25">
+							</p:inputText>
+						</h:panelGroup>
+						<h:outputText value="Por nombres" />
+						<h:panelGroup>
+							<p:inputText id="nombresR"
+								value="#{revisorControlador.nombresBusqueda}" size="50">
+							</p:inputText>
+						</h:panelGroup>
+						<h:outputText value="Por Lugar de Trabajo " />
+						<h:panelGroup>
+							<p:inputText id="lugarR"
+								value="#{revisorControlador.lugarConsulta}" size="50">
+							</p:inputText>
+						</h:panelGroup>
+
+
+					</h:panelGrid>
+
+					<p:commandLink update=":listaRevisores"
+						action="#{revisorControlador.buscarRevisor}"
+						process="@this,identificacionR,nombresR,lugarR,@form">
+						<p:graphicImage value="/images/buscar6.png" title="Buscar"
+							style="border:0px solid #CAD6E0;" />
+					</p:commandLink>
+
+				</p:panel>
+			</h:form>
+		</center>
+
+		<br />
+
+		<center style="display: block;">
+			<h:form id="listaRevisores">
+				<p:panel header="Revisores">
+					<p:dataTable id="listaRevisoresDatatable" paginator="true"
+						paginatorAlwaysVisible="true" paginatorPosition="bottom"
+						rowsPerPageTemplate="3,5,10" emptyMessage="" rows="10"
+						var="revisor" value="#{revisorControlador.listaRevisores}"
+						paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
+						<p:column width="150" style="text-align: center;">
+							<f:facet name="header">
+								<h:outputText value="Nº Identificacion" />
+							</f:facet>
+							<h:outputText value="#{revisor.nidentificacion}" />
+						</p:column>
+						<p:column width="150" style="text-align: center;">
+							<f:facet name="header">
+								<h:outputText value="Apellidos" />
+							</f:facet>
+							<h:outputText value="#{revisor.apellidos}" />
+						</p:column>
+						<p:column width="150" style="text-align: center;">
+							<f:facet name="header">
+								<h:outputText value="Nombres" />
+							</f:facet>
+							<h:outputText value="#{revisor.nombres}" />
+						</p:column>
+						<p:column width="100" style="text-align: center;">
+							<f:facet name="header">
+								<h:outputText value="Acciones" />
+							</f:facet>
+							<p:commandLink oncomplete="dlgrev.show()"
+								process="@this,listaRevisoresDatatable"
+								update=":frmModificacionRevisor">
+								<p:graphicImage value="/images/EDITAR2.png" title="Editar" />
+								<f:setPropertyActionListener
+									target="#{revisorControlador.revisorModificacion}"
+									value="#{revisor}"></f:setPropertyActionListener>
+							</p:commandLink>
+							<p:spacer height="5px" width="10px" />
+							<p:commandLink oncomplete="cd.show();"
+								process="@this,listaRevisoresDatatable">
+								<p:graphicImage value="/images/eliminar24.ico" title="Eliminar" />
+								<f:setPropertyActionListener
+									target="#{revisorControlador.revisorModificacion}"
+									value="#{revisor}"></f:setPropertyActionListener>
+							</p:commandLink>
+						</p:column>
+					</p:dataTable>
+				</p:panel>
+
+			</h:form>
+		</center>
+		<p:dialog id="dialogRevisor" widgetVar="dlgrev" modal="true">
+			<h:form id="frmModificacionRevisor">
+				<div align="center">
+					<p:panel header="Actualización de datos de Revisor"
+						style="width:500px" styleClass="myPanelCentrado">
+						<h:panelGrid columns="2">
+							<h:panelGroup>
+								<h:outputText value="Tipo de Revisor" />
+								<p:spacer width="10px" height="10px" />
+								<p:selectOneMenu id="tipoRevUp"
+									value="#{revisorControlador.revisorSeleccionado}"
+									required="true"
+									requiredMessage="El tipo de revisor no puede ser null"
+									style="width: 100px; vertical-align: middle;">
+									<f:selectItem itemLabel="" itemValue="#{null}" />
+									<f:selectItems value="#{revisorControlador.listaTipoRevisores}"
+										var="tipoRev" itemValue="#{tipoRev.idTiporev}"
+										itemLabel="#{tipoRev.nombreTrev}" />
+								</p:selectOneMenu>
+								<p:spacer width="5" height="5" />
+								<p:graphicImage value="/images/asterisk-icon.png" width="10"
+									height="10" />
+							</h:panelGroup>
+							<p:message id="msgTipoRevUp" for="tipoRevUp" display="icon" />
+						</h:panelGrid>
+						<br />
+						<p:panel header="Datos personales del Revisor"
+							styleClass="myPanelNormal">
+							<h:panelGrid columns="2">
+								<h:outputText value="Identificacion " />
+								<h:panelGroup>
+									<p:inputText id="idUpdate"
+										value="#{revisorControlador.revisorModificacion.nidentificacion}"
+										required="true"
+										requiredMessage="El campo identificacion no puede ser nulo">
+
+									</p:inputText>
+									<p:spacer width="5" height="5" />
+									<p:graphicImage value="/images/asterisk-icon.png" width="10"
+										height="10" />
+									<p:spacer width="60px" height="5px" />
+
+								</h:panelGroup>
+								<h:outputText value="Nombres " />
+								<h:panelGroup>
+									<p:inputText id="nombresRUpdate"
+										value="#{revisorControlador.revisorModificacion.nombres}"
+										required="true"
+										requiredMessage="El campo nombres no puede ser nulo" />
+									<p:spacer width="5" height="5" />
+									<p:graphicImage value="/images/asterisk-icon.png" width="10"
+										height="10" />
+									<p:spacer width="20px" height="5px" />
+									<h:outputText value="Apellidos " />
+									<p:inputText id="apellidosRUpdate"
+										value="#{revisorControlador.revisorModificacion.apellidos}"
+										required="true"
+										requiredMessage="El campo apellidos no puede ser nulo" />
+									<p:spacer width="5" height="5" />
+									<p:graphicImage value="/images/asterisk-icon.png" width="10"
+										height="10" />
+								</h:panelGroup>
+								<h:outputText value="Lugar de Trabajo " />
+								<h:panelGroup>
+									<p:inputText
+										value="#{revisorControlador.revisorModificacion.lugarTrabajo}" />
+								</h:panelGroup>
+
+								<h:outputText value="E-mail" />
+								<h:panelGroup>
+									<p:inputText id="emailRUpdate"
+										value="#{revisorControlador.revisorModificacion.email}"
+										required="true"
+										requiredMessage="El campo email no puede ser nulo">
+
+									</p:inputText>
+								</h:panelGroup>
+							</h:panelGrid>
+							<h:panelGrid id="msgsRevisor" columns="1">
+								<p:message id="msgIdenti" for="idUpdate" />
+								<p:message id="msgApellidos" for="apellidosRUpdate" />
+								<p:message id="msgNombres" for="nombresRUpdate" />
+								<p:message id="msgEmail" for="emailRUpdate" />
+								<p:message id="msgURevisor" for="updateRevisor"></p:message>
+							</h:panelGrid>
+						</p:panel>
+
+
+						<div align="center">
+							<h:panelGrid columns="1">
+								<h:panelGroup>
+									<p:commandLink id="updateRevisor"
+										actionListener="#{revisorControlador.modificarRevisor}"
+										process="@this,frmModificacionRevisor"
+										update="">
+										<p:graphicImage value="/images/GUARDARNuevo.png"
+											title="Guardar" width="35" height="35" />
+									</p:commandLink>
+									<p:spacer width="20px" height="5px" />
+									<h:outputLink
+										value="${request.contextPath}/pages/consultaRevisores.jsf">
+										<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+											width="35" height="35" />
+									</h:outputLink>
+								</h:panelGroup>
+							</h:panelGrid>
+
+						</div>
+						<f:facet name="footer">
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+							<p:spacer width="5" height="5" />
+							<h:outputText value="Campos obligatorios" />
+						</f:facet>
+					</p:panel>
+				</div>
+
+			</h:form>
+
+		</p:dialog>
+		<h:form id="deleteConfirm">
+			<p:confirmDialog
+				message="¿Está seguro(a) que desea eliminar el registro?"
+				header="Eliminación de registro de revisor" severity="alert"
+				widgetVar="cd">
+				<center>
+					<p:commandButton value="Aceptar"
+						actionListener="#{revisorControlador.eliminarRevisor}"
+						update=":listaRevisores" oncomplete="cd.hide()" />
+					<p:commandButton value="Cancelar" onclick="cd.hide();"
+						type="button" />
+				</center>
+			</p:confirmDialog>
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>

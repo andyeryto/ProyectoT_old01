@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="pageTitle">EstadoEventoArticulo</ui:define>
+	<ui:define name="body">
+		<div class="clstitulos"
+			style="float: justify; text-align: center; font-weight: bold; font-size: 13px; font-family: 'Arial';">
+			<p>Información de los diferentes estados de los Eventos del
+				Artículo</p>
+		</div>
+		<center style="display: block; text-align: -webkit-center;">
+			<h:form>
+				<h:panelGroup>
+
+					<p:spacer width="5" height="5"></p:spacer>
+					<p:commandLink action="#{estadoA.initEstadoA}"
+						onclick="nuevoEstadoD.show();" update=":formNuevoEstado">
+						<p:graphicImage value="/images/NUEVO3.png" title="Nuevo Estado Artículo"></p:graphicImage>
+					</p:commandLink>
+					<br />
+					<br />
+					
+					<p:panel header="Buscar estados de Artículos" style="width:200px;">
+						<p:spacer width="5" height="5"></p:spacer>
+						<p:commandLink action="#{estadoA.buscarEstadoA}"
+							update=":listaEstados">
+							<p:graphicImage value="/images/buscar6.png" title="Buscar">
+
+							</p:graphicImage>
+						</p:commandLink>
+					</p:panel>
+
+				</h:panelGroup>
+			</h:form>
+		</center>
+
+		<br />
+		
+		<center style="display: block; text-align: center;">
+			<h:form id="listaEstados">
+				<p:panel header="Lista de Estados de Artículos"
+					styleClass="myPanelCentrado">
+					<p:dataTable id="listaEstadosDataTable" paginator="true"
+						paginatorAlwaysVisible="true" paginatorPosition="bottom"
+						emptyMessage="Para ver los estados existentes presione en Buscar"
+						rows="10" rowsPerPageTemplate="3,6,10" var="estadoArt"
+						value="#{estadoA.listEstadoArt}"
+						paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
+
+						<p:column width="50">
+							<f:facet name="header">
+								<h:outputText value="Código" />
+							</f:facet>
+							<h:outputText value="#{estadoArt.idEstadoa}" />
+						</p:column>
+
+						<p:column width="150">
+							<f:facet name="header">
+								<h:outputText value="Nombre" />
+							</f:facet>
+							<h:outputText value="#{estadoArt.nombreE}" />
+						</p:column>
+
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Acciones" />
+							</f:facet>
+
+							
+						</p:column>
+					</p:dataTable>
+				</p:panel>
+			</h:form>
+		</center>
+		
+		
+		<p:dialog id="nuevoEstado" widgetVar="nuevoEstadoD"
+			header="Nuevo Estado" hideEffect="fade" modal="true"
+			resizable="false">
+			<h:form id="formNuevoEstado">
+				<fieldset style="border-color: #66CCFF; border-style: solid;">
+					<h:panelGrid columns="2">
+						<h:outputText value="Nombre Estado" />
+						<h:panelGroup>
+							<p:inputText id="nomEs"
+								value="#{estadoA.nuevoEstadoArt.nombreE}" maxlength="30"
+								size="50" required="true" requiredMessage="Debe ingresar el nombre del estado" />
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+						<h:outputText value="Descripción" />
+						<p:inputTextarea id="desrcEs"
+							value="#{estadoA.nuevoEstadoArt.descripcionE}" maxlength="80"
+							rows="4" cols="75" />
+					</h:panelGrid>
+				</fieldset>
+				<center>
+					<h:panelGrid columns="1">
+						<h:panelGroup>
+							<p:commandLink id="saveEstado"
+								actionListener="#{estadoA.guardarEstA}"
+								process="nomEs,desrcEs,:formNuevoEstado"
+								update="msgSave,msgNombreEArt,:formNuevoEstado,:listaEstados">
+								<p:graphicImage value="/images/GUARDARNuevo.png" title="Guardar"
+									width="32" height="32" />
+							</p:commandLink>
+							<p:spacer width="5" height="5"></p:spacer>
+							<p:commandLink oncomplete="nuevoEstadoD.hide();">
+								<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+									width="36" height="35" />
+							</p:commandLink>
+						</h:panelGroup>
+					</h:panelGrid>
+					<h:panelGrid columns="1">
+						<p:message id="msgSave" for="saveEstado" />
+						<p:message id="msgNombreEArt" for="nomEs" />
+					</h:panelGrid>
+
+				</center>
+
+
+			</h:form>
+
+			<f:facet name="footer">
+				<p:graphicImage value="/images/asterisk-icon.png" width="10"
+					height="10" />
+				<p:spacer width="5" height="5" />
+				<h:outputText value="Campos obligatorios" />
+			</f:facet>
+		</p:dialog>
+		
+					
+					
+		
+		
+	</ui:define>
+</ui:composition>
+

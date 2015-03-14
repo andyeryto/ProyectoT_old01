@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ModeloWEB/WebContent/pages/test1.xhtml&apos; to &apos;registroHCL.xhtml&apos;" description="Rename resource &apos;test1.xhtml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/pages/test1.xhtml" name="registroHCL.xhtml" stamp="1406429980527" updateReferences="true"/>
+</session>

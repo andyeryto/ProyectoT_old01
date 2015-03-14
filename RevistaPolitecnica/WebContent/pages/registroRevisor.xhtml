@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:v="http://validators.epn.edu.ec.com">
+
+	<ui:define name="pageTitle">Revisor</ui:define>
+	<ui:define name="body">
+		<h:form id="frmRegistroRevisor">
+
+			<div align="center">
+				<p:panel header="Registro Revisor" style="width:500px"
+					styleClass="myPanelCentrado">
+					<h:panelGrid columns="2">
+						<h:outputText value="Tipo de Revisor:" />
+						<h:panelGroup>
+							<p:spacer width="5" height="5" />
+							<p:focus for="tipoRevisor" />
+							<p:selectOneMenu id="tipoRevisor"
+								value="#{revisorControlador.revisorSeleccionado}"
+								required="true"
+								requiredMessage="El tipo de Revisor no puede ser Nulo">
+								<f:selectItems value="#{revisorControlador.listaTipoRevisores}"
+									var="rev" itemLabel="#{rev.nombreTrev}"
+									itemValue="#{rev.idTiporev}" />
+								<f:selectItem itemLabel="" itemValue="#{null}" />
+							</p:selectOneMenu>
+
+							<p:spacer width="5" height="0" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+
+
+
+					</h:panelGrid>
+					<br />
+
+					<p:panel header="Datos Revisor">
+						<h:panelGrid columns="2">
+							<h:outputText value="Nª de Identificacion:" />
+							<h:panelGroup>
+								<p:inputText id="identificacionRevisor"
+									value="#{revisorControlador.revisorIngreso.nidentificacion}"
+									required="true"
+									requiredMessage="El Número de Identificación no puede ser nulo"></p:inputText>
+								<p:spacer width="5" height="5" />
+								<p:graphicImage value="/images/asterisk-icon.png" width="10"
+									height="10" />
+							</h:panelGroup>
+							<h:outputText value="Nombres" />
+							<h:panelGroup>
+								<p:inputText id="nombreRevisor"
+									value="#{revisorControlador.revisorIngreso.nombres}"
+									required="true"
+									requiredMessage="El nombre es un campo Obligatorio"></p:inputText>
+								<p:spacer width="5" height="5" />
+								<p:graphicImage value="/images/asterisk-icon.png" width="10"
+									height="10" />
+							</h:panelGroup>
+							<h:outputText value="Apellidos:" />
+							<h:panelGroup>
+								<p:inputText id="apellidoRevisor"
+									value="#{revisorControlador.revisorIngreso.apellidos}"
+									required="true"
+									requiredMessage="El apellido es un campo obligatorio"></p:inputText>
+								<p:spacer width="5" height="5" />
+								<p:graphicImage value="/images/asterisk-icon.png" width="10"
+									height="10" />
+							</h:panelGroup>
+							<h:outputText value="E-mail:" />
+							<h:panelGroup>
+								<p:inputText id="emailRevisor"
+									value="#{revisorControlador.revisorIngreso.email}"
+									required="true" requiredMessage="El email no puede ser nulo"></p:inputText>
+								<p:spacer width="5" height="5" />
+								<p:graphicImage value="/images/asterisk-icon.png" width="10"
+									height="10" />
+							</h:panelGroup>
+							<h:outputText value="Lugar de Trabajo: " />
+							<p:inputText
+								value="#{revisorControlador.revisorIngreso.lugarTrabajo}"></p:inputText>
+
+						</h:panelGrid>
+					</p:panel>
+					<div align="center">
+						<h:panelGrid columns="1">
+							<h:panelGroup>
+								<p:commandLink id="saveRevisor"
+									actionListener="#{revisorControlador.grabarRevisor}"
+									process="frmRegistroRevisor"
+									update="frmRegistroRevisor,msgsSaving">
+									<p:graphicImage value="/images/GUARDARNuevo.png" title="Guardar"
+										width="35" height="35" />
+								</p:commandLink>
+								<p:spacer width="20px" height="5px" />
+
+								<p:spacer width="20px" height="5px" />
+								<h:outputLink
+									value="${request.contextPath}/pages/consultaRevisores.jsf">
+									<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+										width="35" height="35" />
+								</h:outputLink>
+							</h:panelGroup>
+						</h:panelGrid>
+						<h:panelGrid id="msgsSaving" columns="1">
+							<p:message id="msgSave" for="saveRevisor" />
+							<p:message id="msgTipoRev" for="tipoRevisor" display="icon" />
+							<p:message id="msgNumIdent" for="identificacionRevisor" />
+							<p:message id="msgNombreRevisor" for="nombreRevisor" />
+							<p:message id="msgApellidoRevisor" for="apellidoRevisor" />
+							<p:message id="msgEmailRevisor" for="emailRevisor" />
+							
+						</h:panelGrid>
+
+					</div>
+					<f:facet name="footer">
+						<p:graphicImage value="/images/asterisk-icon.png" width="10"
+							height="10" />
+						<p:spacer width="5" height="5" />
+						<h:outputText value="Campos obligatorios" />
+					</f:facet>
+
+				</p:panel>
+
+			</div>
+
+		</h:form>
+
+
+
+
+	</ui:define>
+
+
+</ui:composition>

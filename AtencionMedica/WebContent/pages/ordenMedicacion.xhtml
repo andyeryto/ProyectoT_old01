@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<ui:composition template="/templates/common.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:v="http://validators.epn.edu.ec.com">
+      
+<ui:define name="pageTitle">Emitir Orden de Medicación</ui:define>
+	<ui:define name="body">
+	
+	<h:form id="formOrdenMed">
+			<div align="center">
+				<p:panel header="ORDEN DE DESPACHO DE MEDICACIÓN" style="width:760px" >
+	                   <h:panelGrid columns= "8" >
+							<h:outputText value="Orden N.-  "  style="FONT-WEIGHT: bold;"/>
+						    <h:inputText id="ord"
+								value="" size="5"
+								required="true" readonly="true" />
+								
+							<h:outputText value="Paciente  "  style="FONT-WEIGHT: bold;"/>
+						    <h:inputText id="paci"
+								value="" size="25"
+								required="true" readonly="true" />
+							
+							
+							<h:outputText value="CI:  " style="FONT-WEIGHT: bold;"/>
+							<h:inputText id="cedulaa"
+								 value="" size="11"
+								required="true" readonly="true" />
+					   		
+					   		
+							<h:outputText value=" Fecha:  "  style="FONT-WEIGHT: bold;"/>
+						    <h:inputText id="fecha1"  
+								value="" size="15"
+								required="true"  readonly="true"/>	
+						</h:panelGrid>
+						<div align="left">
+							 <h:panelGrid columns="2">
+							     <h:outputText value="Sumunistrar en este momento "  style="FONT-WEIGHT: bold;"/>
+								 <p:selectBooleanCheckbox value="" /> 
+							 </h:panelGrid>
+					    </div>
+					<p:spacer height="30"/>
+					<p:dataTable id="dgridOrdenMedic" paginator="true"
+						rows="5"
+						paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+						value="" var="art"
+						paginatorAlwaysVisible="false" rowsPerPageTemplate="1"
+						emptyMessage="" paginatorPosition="bottom">
+						<p:column width="80">
+							<f:facet name="header">
+								<h:outputText value="Nombre genérico " />
+							</f:facet>
+						    <h:inputText id="nomge"
+									value=""
+									required="true"  />
+						</p:column>
+						<p:column width="80">
+							<f:facet name="header">
+								<h:outputText value="Forma farmacéutica y concentración" />
+							</f:facet>
+							<h:inputText id="ff"
+									value=""
+									 required="true"  />
+						</p:column>
+						<p:column width="60">
+							<f:facet name="header">
+								<h:outputText value="Cantidad"  />
+							</f:facet>
+							<h:inputText  id="cant"
+									value=""
+									required="true" />
+						</p:column>
+				    </p:dataTable>
+	                <center>
+					<h:panelGrid columns="3">	
+						  <p:commandLink id="Buscar"
+							  onclick="dlgMed.show();" update="formOrdenMed" >
+								<p:graphicImage value="/images/buscar6.png" title="Buscar"
+								width="32" height="32"/>
+						  </p:commandLink>	
+						  
+						  <p:spacer width="10"/>
+						  <p:commandLink id="Emitir"
+							    update="dgridOrdenMedic">
+								<p:graphicImage value="/images/imprime.jpg" title="Emitir"
+								width="32" height="32"/>
+						  </p:commandLink>	
+					  
+					</h:panelGrid>	
+					</center>	    
+			  </p:panel>
+          </div>
+	</h:form>	
+	<p:dialog id="dialogInsumosMedicos" widgetVar="dlgMed" modal="true" >
+			<h:form id="frmConsultarInsMedicos">
+				<div align="center">
+					<p:panel header="Insumos Médicos"
+							style="width:600px" styleClass="myPanelCentrado">
+							<h:panelGrid columns="2">
+								<h:panelGroup>
+									<h:outputText value="Nombre genérico Med:" />
+									<p:inputText id="idNomM"
+										value=""
+										required="true"
+										requiredMessage="El campo identificacion no puede ser nulo">
+	
+									</p:inputText>
+									<p:spacer width="5" height="5" />
+									<p:graphicImage value="/images/asterisk-icon.png" width="10"
+										height="10" />
+								</h:panelGroup>
+								<p:message id="msgMed" for="idNomM" display="icon" />
+								</h:panelGrid>
+								<p:spacer height="30"/>
+								<p:dataTable id="dgridInsMedic" paginator="true"
+									rows="5"
+									paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+									value="" var="art"
+									paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5,10"
+									emptyMessage="" paginatorPosition="bottom">
+									<p:column width="80">
+										<f:facet name="header">
+											<h:outputText value="Nombre generico" />
+										</f:facet>
+										<h:outputText value="" />
+									</p:column>
+									<p:column width="80">
+										<f:facet name="header"  width="40">
+											<h:outputText value="Forma farmacéutica y concentración" />
+										</f:facet>
+										<h:outputText value="" />
+									</p:column>
+									<p:column width="60">
+										<f:facet name="header">
+											<h:outputText value="Saldo" />
+										</f:facet>
+										<h:outputText value="" />
+									</p:column>
+									<p:column width="50">
+										<f:facet name="header">
+											<h:outputText value="Acciones" />
+										</f:facet>
+			
+										<p:commandLink
+											action="Seleccionar"
+											ajax="false" disabled="">
+											<p:graphicImage value="/images/SELECCIONAR.ico"
+												title="AtenderPac" width="20"
+												height="20" />
+										</p:commandLink>
+									</p:column>
+								</p:dataTable>
+		                        <f:facet name="footer">
+									<p:graphicImage value="/images/asterisk-icon.png" width="10"
+										height="10" />
+									<p:spacer width="5" height="5" />
+									<h:outputText value="Campos obligatorios" />
+								</f:facet>
+					</p:panel>
+				</div>
+
+			</h:form>
+		</p:dialog>
+
+	</ui:define>
+</ui:composition>
+	

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AtencionMedica/WebContent/pages/registroHCL.xhtml&apos; to &apos;consultarPaciente.xhtml&apos;" description="Rename resource &apos;registroHCL.xhtml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/pages/registroHCL.xhtml" name="consultarPaciente.xhtml" stamp="1406577172370" updateReferences="true"/>
+</session>

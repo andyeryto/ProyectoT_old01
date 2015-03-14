@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:v="http://validators.epn.edu.ec.com">
+
+	<ui:define name="pageTitle">ImprimirVolumen  </ui:define>
+	<ui:define name="body">
+
+		<h:form id="imprime">
+
+			<div id="seleccion">
+				<table width="700" align="center"
+					style="BORDER-BOTTOM: #000000 4px solid;">
+					<tr>
+						<td align="center" width="50"><h:graphicImage id="logoEPN"
+								value="/images/logo_epn.jpg" style="border:0px solid #CAD6E0;" /></td>
+						<td align="center"><h:outputText
+								value="ESCUELA POLITECNICA NACIONAL"
+								style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 15px; " />
+							<br /> <h:outputText value="REVISTA POLITECNICA"
+								style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 15px; " />
+							<br /> <h:outputText
+								value=" Campus Politécnico José Rubén Orellana Ricaurte "
+								style="FONT-FAMILY: arial; FONT-SIZE: 11px; " /> <br /> <h:outputText
+								value="Direc.: Pasaje Andalucía E12-A y Alfredo Mera Caamaño  "
+								style="FONT-FAMILY: arial; FONT-SIZE: 11px; " /> <h:outputText
+								value="Telf.: 2507 144"
+								style="FONT-FAMILY: arial; FONT-SIZE: 11px; " /> <br /> <h:outputText
+								value="Quito - Ecuador"
+								style="FONT-FAMILY: arial; FONT-SIZE: 11px; " /> <br /></td>
+						<td align="center" width="50"><h:graphicImage id="logoCICAM"
+								value="/images/buhoepn.jpg" style="border:0px solid #CAD6E0;" /></td>
+					</tr>
+				</table>
+
+				<br /> <br />
+
+				<table width="700" style="BORD	ER: #000000 1px solid;" align="center">
+					<tr align="justify">
+						<td align="left" width="20"><h:outputText value="Volumen:"
+								style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " /></td>
+						<td align="left"><h:outputText
+								value="#{volumen.volumenSelect.nombreVol}"
+								style="FONT-FAMILY: arial; FONT-SIZE: 12px; " /></td>
+
+						<td align="left" width="20"><h:outputText value="Fecha:"
+								style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " /></td>
+						<td align="left"><h:outputText
+								value="#{volumen.volumenSelect.fechaPub}"
+								style="FONT-FAMILY: arial; FONT-SIZE: 12px; " /></td>
+
+					</tr>
+
+					<tr />
+					<tr />
+					<tr />
+
+				</table>
+
+				<br /> <br />
+
+				<p:dataTable id="articulosDataTable" var="artivol"
+					value="#{volumen.listaArticulosVolumen}" align="center" border="2"
+					width="700" cellpadding="2">
+
+					<p:column width="80">
+						<center>
+
+							<f:facet name="header">
+								<h:outputText value="Código"
+									style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " />
+							</f:facet>
+							<h:outputText id="artCod" value="#{artivol.auxAutogenerado}"
+								style="FONT-FAMILY: arial; FONT-SIZE: 10px; " />
+						</center>
+					</p:column>
+
+					<p:column width="150">
+						<center>
+							<f:facet name="header">
+								<h:outputText value="Título"
+									style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " />
+							</f:facet>
+							<h:outputText id="artTitulo" value="#{artivol.tituloArticulo}"
+								style=" FONT-FAMILY: arial; FONT-SIZE: 10px; " />
+						</center>
+					</p:column>
+
+
+					<p:column width="150">
+						<center>
+							<f:facet name="header">
+								<h:outputText value="Autor: "
+									style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " />
+							</f:facet>
+							<h:outputText id="nomPresent"
+								value="#{artivol.emp_1.nom} #{artivol.emp_1.apel}"
+								style=" FONT-FAMILY: arial; FONT-SIZE: 10px; " />
+
+						</center>
+					</p:column>
+
+
+
+				</p:dataTable>
+
+
+
+
+
+
+			</div>
+
+		</h:form>
+		<center>
+
+
+			<h:form>
+
+
+
+
+
+				<h:commandButton value="Imprimir" type="button" icon="ui-icon-print">
+					<p:printer target=":imprime" />
+				</h:commandButton>
+				<p:spacer width="2px" height="2px">
+				</p:spacer>
+					<h:outputLink
+								value="${request.contextPath}/pages/consultarVolumen.jsf">
+								<h:outputText value="ATRAS" />
+							</h:outputLink>
+			</h:form>
+
+
+		</center>
+
+
+
+
+
+
+
+
+
+
+	</ui:define>
+</ui:composition>

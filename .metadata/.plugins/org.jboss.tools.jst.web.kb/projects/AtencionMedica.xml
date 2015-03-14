@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="/AtencionMedica/WebContent/META-INF/validators.taglib.xml">
+   <libraries>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/WEB-ROOT/meta-inf/validators.taglib.xml" project="AtencionMedica"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="D:/ProyectoT/AtencionMedica/WebContent/WEB-INF/lib/cas-client-core-3.1.10.jar"/>
+  <path value="D:/ProyectoT/AtencionMedica/WebContent/WEB-INF/lib/cas-client-support-distributed-memcached-3.1.10.jar"/>
+  <path value="D:/ProyectoT/AtencionMedica/WebContent/WEB-INF/lib/cas-client-integration-atlassian-3.1.10.jar"/>
+  <path value="D:/ProyectoT/AtencionMedica/WebContent/WEB-INF/lib/seguridadWebEPN.jar"/>
+  <path value="D:/ProyectoT/AtencionMedica/WebContent/WEB-INF/lib/cas-client-support-distributed-ehcache-3.1.10.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <el>
+   <linked-el length="28" name="%0" offset="608" path="%1"/>
+   <linked-el length="41" name="%2" offset="1505" path="%3"/>
+   <linked-el length="33" name="%4" offset="1359" path="%5"/>
+   <linked-el length="28" name="%4" offset="1322" path="%5"/>
+   <linked-el length="31" name="%6" offset="811" path="%7"/>
+   <linked-el length="30" name="%8" offset="4795" path="%9"/>
+   <linked-el length="31" name="%8" offset="1435" path="%10"/>
+   <linked-el length="30" name="%8" offset="12078" path="%11"/>
+   <linked-el length="30" name="%8" offset="914" path="%11"/>
+   <linked-el length="30" name="%8" offset="4138" path="%9"/>
+   <linked-el length="30" name="%8" offset="11711" path="%11"/>
+   <linked-el length="30" name="%8" offset="4138" path="%12"/>
+   <linked-el length="31" name="%8" offset="1667" path="%13"/>
+   <linked-el length="41" name="%14" offset="1505" path="%3"/>
+   <linked-el length="38" name="%15" offset="1768" path="%3"/>
+   <linked-el length="35" name="%16" offset="856" path="%5"/>
+   <linked-el length="19" name="%17" offset="729" path="%5"/>
+   <linked-el length="33" name="%17" offset="1359" path="%5"/>
+   <linked-el length="28" name="%17" offset="1322" path="%5"/>
+   <linked-el length="35" name="%17" offset="856" path="%5"/>
+   <linked-el length="42" name="%18" offset="524" path="%3"/>
+   <linked-el length="51" name="%18" offset="1640" path="%3"/>
+   <linked-el length="50" name="%18" offset="1422" path="%3"/>
+   <linked-el length="47" name="%18" offset="1889" path="%3"/>
+   <linked-el length="80" name="%18" offset="932" path="%3"/>
+   <linked-el length="30" name="%19" offset="1512" path="%7"/>
+   <linked-el length="19" name="%20" offset="729" path="%5"/>
+   <linked-el length="42" name="%21" offset="524" path="%3"/>
+   <linked-el length="51" name="%21" offset="1640" path="%3"/>
+   <linked-el length="50" name="%21" offset="1422" path="%3"/>
+   <linked-el length="47" name="%21" offset="1889" path="%3"/>
+   <linked-el length="80" name="%21" offset="932" path="%3"/>
+   <linked-el length="37" name="%22" offset="916" path="%7"/>
+   <linked-el length="29" name="%23" offset="1409" path="%7"/>
+   <linked-el length="30" name="%24" offset="4795" path="%9"/>
+   <linked-el length="31" name="%24" offset="1435" path="%10"/>
+   <linked-el length="30" name="%24" offset="12078" path="%11"/>
+   <linked-el length="30" name="%24" offset="914" path="%11"/>
+   <linked-el length="30" name="%24" offset="4138" path="%9"/>
+   <linked-el length="30" name="%24" offset="11711" path="%11"/>
+   <linked-el length="30" name="%24" offset="4138" path="%12"/>
+   <linked-el length="31" name="%24" offset="1667" path="%13"/>
+   <linked-el length="15" name="%25" offset="772" path="%5"/>
+   <linked-el length="15" name="%25" offset="660" path="%1"/>
+   <linked-el length="27" name="%26" offset="951" path="%27"/>
+   <linked-el length="28" name="%28" offset="1137" path="%7"/>
+   <linked-el length="22" name="%29" offset="897" path="%1"/>
+   <linked-el length="22" name="%29" offset="1096" path="%1"/>
+   <linked-el length="41" name="%30" offset="1505" path="%3"/>
+   <linked-el length="38" name="%30" offset="1724" path="%3"/>
+   <linked-el length="28" name="%30" offset="608" path="%1"/>
+   <linked-el length="27" name="%30" offset="951" path="%27"/>
+   <linked-el length="32" name="%30" offset="1098" path="%27"/>
+   <linked-el length="37" name="%30" offset="885" path="%27"/>
+   <linked-el length="38" name="%30" offset="1768" path="%3"/>
+   <linked-el length="37" name="%31" offset="916" path="%7"/>
+   <linked-el length="30" name="%31" offset="1512" path="%7"/>
+   <linked-el length="29" name="%31" offset="1409" path="%7"/>
+   <linked-el length="30" name="%31" offset="1737" path="%7"/>
+   <linked-el length="28" name="%31" offset="1137" path="%7"/>
+   <linked-el length="31" name="%31" offset="811" path="%7"/>
+   <linked-el length="26" name="%32" offset="1041" path="%1"/>
+   <linked-el length="15" name="%33" offset="772" path="%5"/>
+   <linked-el length="15" name="%33" offset="660" path="%1"/>
+   <linked-el length="22" name="%33" offset="897" path="%1"/>
+   <linked-el length="10" name="%33" offset="1042" path="%5"/>
+   <linked-el length="10" name="%33" offset="1202" path="%5"/>
+   <linked-el length="26" name="%33" offset="1041" path="%1"/>
+   <linked-el length="22" name="%33" offset="1096" path="%1"/>
+   <linked-el length="30" name="%34" offset="1737" path="%7"/>
+   <linked-el length="38" name="%35" offset="1724" path="%3"/>
+   <linked-el length="37" name="%35" offset="885" path="%27"/>
+   <linked-el length="22" name="%36" offset="897" path="%1"/>
+   <linked-el length="26" name="%36" offset="1041" path="%1"/>
+   <linked-el length="22" name="%36" offset="1096" path="%1"/>
+   <linked-el length="32" name="%37" offset="1098" path="%27"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/AtencionMedica/WebContent/pages/tree.xhtml" value="%5"/>
+  <alias path="sesionUsuario.nodoRaiz" value="%0"/>
+  <alias path="sesionUsuario.usuario" value="%2"/>
+  <alias path="treeBean.selected" value="%4"/>
+  <alias path="cambioClave.claveAnterior" value="%6"/>
+  <alias path="selectOneMenuView.console" value="%8"/>
+  <alias path="sesionUsuario.usuario.nombreUsuario" value="%14"/>
+  <alias path="sesionUsuario.accesos" value="%15"/>
+  <alias path="treeBean.selectionChanged" value="%16"/>
+  <alias path="treeBean" value="%17"/>
+  <alias path="request.contextPath" value="%18"/>
+  <alias path="/AtencionMedica/WebContent/templates/common.xhtml" value="%3"/>
+  <alias path="/AtencionMedica/WebContent/pages/atencionMedica.xhtml" value="%11"/>
+  <alias path="/AtencionMedica/WebContent/seguridad/cambioClave.xhtml" value="%7"/>
+  <alias path="cambioClave.validaClave2" value="%19"/>
+  <alias path="treeBean.root" value="%20"/>
+  <alias path="request" value="%21"/>
+  <alias path="cambioClave.validaClaveAnterior" value="%22"/>
+  <alias path="/AtencionMedica/WebContent/pages/registrarTurno.xhtml" value="%9"/>
+  <alias path="/AtencionMedica/WebContent/templates/tree-page.xhtml" value="%1"/>
+  <alias path="/AtencionMedica/WebContent/pages/asignarTurno.xhtml" value="%12"/>
+  <alias path="cambioClave.claveNueva2" value="%23"/>
+  <alias path="selectOneMenuView" value="%24"/>
+  <alias
+   path="/AtencionMedica/WebContent/pages/registrarIngresoIM.xhtml" value="%10"/>
+  <alias
+   path="/AtencionMedica/WebContent/pages/registrarAjusteyBaja.xhtml" value="%13"/>
+  <alias path="node.type" value="%25"/>
+  <alias path="sesionUsuario.perfiles" value="%26"/>
+  <alias path="cambioClave.claveNueva" value="%28"/>
+  <alias path="sesionUsuario" value="%30"/>
+  <alias path="node.data.nombre" value="%29"/>
+  <alias path="node.data.urlCompleto" value="%32"/>
+  <alias path="cambioClave" value="%31"/>
+  <alias path="cambioClave.cambiarClave" value="%34"/>
+  <alias path="node" value="%33"/>
+  <alias path="node.data" value="%36"/>
+  <alias path="sesionUsuario.perfilSeleccionado" value="%35"/>
+  <alias path="sesionUsuario.seleccionRol" value="%37"/>
+  <alias path="/AtencionMedica/WebContent/seguridad/seleccionRol.xhtml" value="%27"/>
+ </aliases>
+</kb-project>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<ui:composition template="/templates/common.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:v="http://validators.epn.edu.ec.com">
+      
+<ui:define name="pageTitle">REGISTRAR INGRESO INSUMO MÉDICO</ui:define>
+	<ui:define name="body">
+					
+				
+	
+		 
+	<h:form id="formRegIngresoIM">
+	<div align="center">
+	<p:panel header="REGISTRAR INGRESO DE INSUMOS MÉDICOS" style="width:760px" alignText="center">
+	 <h:form >
+	              <div align="right">
+	               <h:outputText value="Fecha : " style="FONT-WEIGHT: bold;"/>
+				   <h:inputText id="fecha"
+						value="" size="13"
+						required="true" readonly="true" />  <!-- debe tomar la fecha actual -->      
+	               
+	                </div>
+	                </h:form>
+    <div align="left">
+			<h:panelGrid columns="2">
+			         <h:outputText value="Código de documento" />
+		             <p:inputText id="nDoc" value="" size="13" /> 
+			                      	 
+			   	    <h:outputText  value="Tipo de ingreso: " />
+		         
+			         <p:selectOneMenu id="console1" value="#{selectOneMenuView.console}" >
+			            
+			            <f:selectItem itemLabel="Compra" itemValue="c" />
+			            <f:selectItem itemLabel="Donación" itemValue="d" />
+			            <f:selectItem itemLabel="Cambio" itemValue="cam" />
+			            
+		           	 </p:selectOneMenu>
+	        </h:panelGrid>
+     </div>
+	</p:panel>
+</div>
+	<p:panel id="cuerpo">
+	    <br/>
+	    <center>
+	    <h:panelGrid  columns="4">
+		   <p:outputLabel value="Insumo médico: " for="dd" />
+	        <p:autoComplete id="dd" dropdown="true" value=""  />
+	        
+	         <p:spacer width="15px" />
+	        <p:commandLink onclick="dlgNuevoInsumoMedico.show()" ajax="true">
+				<p:graphicImage value="/images/NUEVO3.png"  title="NUEVO INSUMO MÉDICO"/>
+			</p:commandLink>
+        </h:panelGrid>	
+      
+	    
+	    <h:panelGrid columns ="6" >
+	       	
+        	<h:outputText value="Cantidad actual" />
+             <p:inputText id="cantActu" value="" size="5" readonly="true"/> 
+            
+             <h:outputText value="Cantidad de ingreso" />
+             <p:inputText id="cantTx" value="" size="5" /> 
+	   </h:panelGrid>
+	   <p:spacer heigth="20"/>
+	         <p:commandLink
+				action="Aceptar"
+				ajax="false" disabled="">
+				<p:graphicImage value="/images/aprobar.png"
+					title="Añadir al detalle" width="30"
+					height="32" />
+			</p:commandLink>
+		 <p:spacer heigth="40"/>							
+	   </center>
+	   
+	 	   <h:form>
+	 	    <p:panel header="Detalle">
+							<p:dataTable id="dgridResult" paginator="true"
+								rows="10"
+								paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								value="" var="art"
+								paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5"
+								emptyMessage="" paginatorPosition="bottom">
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Insumo médico" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Cantidad actual" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								
+                                <p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Cantidad de ingreso" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+                                      <p:commandLink oncomplete="cd.show()"
+								            disabled="">
+								           <p:graphicImage value="/images/eliminar24.ico" title="Cancelar"
+									       style="border:0px solid #CAD6E0;" height="20" width="20"></p:graphicImage>
+								</p:commandLink>   
+                                </p:column>
+                   </p:dataTable>
+			  
+         	</p:panel>
+	      <p:spacer heigth="40"/>   
+	   </h:form>
+	    <center>
+	     <h:panelGrid columns="2">
+	         <p:commandLink
+				action="Guardar"
+				ajax="false" disabled="">
+				<p:graphicImage value="/images/GUARDARNuevo.png"
+					title="Guardar" width="30"
+					height="32" />
+				</p:commandLink>
+				 <p:commandLink
+					action="Salir"
+					disabled="">
+					<p:graphicImage value="/images/atras.gif"
+						title="Salir" width="30"
+						height="32" />
+				</p:commandLink>
+			</h:panelGrid>
+			</center>
+	</p:panel>
+   </h:form>
+				
+				
+				<p:dialog id="dialogPaciente" widgetVar="dlgNuevoInsumoMedico" modal="true">
+	                  <h:form id="formNuevoIM">
+	                  <div align="center">
+	                  <p:panel header="REGISTRAR INSUMO MEDICO" style="width:760px" >
+	                   <h:panelGrid columns= "2" >
+							
+							<p:outputLabel for="console" value="Tipo de Insumo Médico: " style="FONT-WEIGHT: bold;" />
+					        <p:selectOneMenu id="console" value="">
+					            <f:selectItem itemLabel="Analgésicos y antiinflamatorio" itemValue="Analgésicos" />
+					            <f:selectItem itemLabel="Antibiótico" itemValue="Antibiótico" />
+					            <f:selectItem itemLabel="Antiespasmódicos y protector gástrico" itemValue="Antiespasmódicos" />
+					            <f:selectItem itemLabel="Corticoides" itemValue="Corticoides" />
+					            <f:selectItem itemLabel="Antigripales" itemValue="Antigripales" />
+					            <f:selectItem itemLabel="Antiparasitarios" itemValue="Antiparasitarios" />
+					            <f:selectItem itemLabel="Antihistaminico" itemValue="Antihistaminico" />
+					            <f:selectItem itemLabel="Antidepresivo" itemValue="Antidepresivo" />
+					        </p:selectOneMenu>
+					        
+							<h:outputText value="Código: "  style="FONT-WEIGHT: bold;"/>
+						    <h:inputText id="cod"
+								value="" size="40"
+								required="true"  />
+							
+							<h:outputText value="Nombre genérico: "  style="FONT-WEIGHT: bold;"/>
+						    <h:inputText id="nomGen"
+								value="" size="40"
+								required="true"  />
+								
+							<h:outputText value="Forma farmacéutica y concentración (FFyC): "  style="FONT-WEIGHT: bold;"/>
+						    <h:inputText id="farCon"
+								value="" size="40"
+								required="true"  />
+							  
+							
+	                      </h:panelGrid>
+	                      <p:spacer height="15px" />
+	                      <h:panelGrid columns="2">
+	                          <center>
+								 <h:panelGroup>	
+									  <p:commandLink id="Guardar"			>
+											<p:graphicImage  value="/images/GUARDARNuevo.png" title="Guardar"
+											width="32" height="32"/>
+									  </p:commandLink>	
+									  <p:spacer width="25" height="15" />
+									  <p:commandLink id="Cancelar"			>
+											<p:graphicImage value="/images/cancelar.gif" title="Cancelar"
+											width="32" height="32"/>
+									  </p:commandLink>	
+								 </h:panelGroup>	
+							 </center>	  
+	                      </h:panelGrid>
+	                      </p:panel>
+	                      </div>
+	                    </h:form>
+	                 </p:dialog>
+	          
+	</ui:define>
+</ui:composition>

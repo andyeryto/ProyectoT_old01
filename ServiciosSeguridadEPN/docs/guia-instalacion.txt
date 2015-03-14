@@ -1,0 +1,6 @@
+Para instalar el servidor CAS se deben seguir los siguientes pasos:
+
+  1) Copiar el archivo postgres-ds.xml de la capeta "Jboss-config" a la carpeta "deploy" del servidor JBoss.
+  2) Dar click derecho en la aplicación y escoger dentro de la opción "Exportar" la opción "EJB jar file"
+  3) Seleccionar la carpeta en la que se desea generar la aplicacion y colocar el nombre serviciosSeguridadEpn.jar al archivo
+  4) Copiar el serviciosSeguridadEpn.jar a la carpeta "deploy" del servidor JBoss.  

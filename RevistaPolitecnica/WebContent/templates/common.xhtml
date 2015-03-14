@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+
+
+		<h:head>
+			<title><ui:insert name="pageTitle">Page Title</ui:insert></title>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<link type="text/css" href="${request.contextPath}/css/template.css" rel="stylesheet"></link>
+			<h:outputScript library="js" name="locale_es.js" />
+			<h:outputScript library="js" name="upload.js" />
+		</h:head>
+		<h:body class="clsBody" style="margin: 0">
+			<div id="idBodySII" class="clsBodySII">
+				<table class="clsTablePrincipal" cellspacing="0" cellpadding="0"
+					style="width: 100%">
+					<tr>
+						<td>
+							<div id="idHeadSII" class="clsHeadSII"
+								style="background-image: url('${request.contextPath}/images/fondo.gif'); height: 60px">
+								<div style="float: left;" class="clsImagenSII">
+									<!-- <h:graphicImage value="/images/tituloepn.gif" height="55px" /> -->
+								</div>
+								<div class="clsInfoUsuario"
+									style="float: right; text-align: right; font-weight: bold; font-size: 13px; font-family: 'Arial'; margin-right: 10px">
+									Bienvenido: <a style="font-size: 13px; font-family: 'Arial'"
+										href="${request.contextPath}/seguridad/cambioClave.jsf"><h:outputText
+											value="#{sesionUsuario.usuario.nombreUsuario}" /></a> <br />
+									Rol: <a style="font-size: 13px; font-family: 'Arial'"
+										href="${request.contextPath}/seguridad/seleccionRol.jsf"><h:outputText
+											value="#{sesionUsuario.perfilSeleccionado}" /></a>
+									(#{sesionUsuario.accesos}) <br /> <a
+										style="font-size: 13px; font-family: 'Arial'"
+										href="${request.contextPath}/seguridad/cerrarSesion">Cerrar
+										Sesión</a>
+								</div>
+							</div>
+							<div id="idCuerpoSII" style="float: none">
+								<div class="clsIzquierdo"
+									style="float: left; border: 1px solid #CAD6E0">
+									<div>
+										<ui:include src="/templates/tree-page.xhtml"/>
+									</div>
+								</div>
+								<div class="clsCentro" style="float: left; margin: 10px">
+									<ui:insert name="body">Page Body</ui:insert>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+		</h:body>
+</html>

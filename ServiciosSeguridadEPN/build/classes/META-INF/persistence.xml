@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="ServiciosSeguridadEPN" transaction-type="JTA">
+		<jta-data-source>java:jboss/datasources/SeguridadEPNDS</jta-data-source>
+		<class>ec.edu.epn.seguridad.vo.Menu</class>
+		<class>ec.edu.epn.seguridad.vo.Usuario</class>
+		<class>ec.edu.epn.seguridad.vo.Perfil</class>
+		<class>ec.edu.epn.seguridad.vo.Aplicacion</class>
+		<class>ec.edu.epn.seguridad.vo.Autorizacion</class>
+		<class>ec.edu.epn.seguridad.vo.AccesoUrl</class>
+		<class>ec.edu.epn.seguridad.vo.AccesoParametro</class>
+		<class>ec.edu.epn.seguridad.vo.Unidad</class>
+		<class>ec.edu.epn.seguridad.vo.Personal</class>
+		<properties>
+			<property name="jboss.as.jpa.providerModule" value="org.hibernate:3" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+			<property name="hibernate.hbm2ddl.auto" value="false" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<ui:composition template="/templates/common.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:v="http://validators.epn.edu.ec.com">
+      
+<ui:define name="pageTitle">ATENCION MÉDICA</ui:define>
+	<ui:define name="body">
+	<h:form id="formRegistroATM">
+				<div align="center">
+ 		
+					<p:panel header="REGISTRAR ATENCIÓN MÉDICA AMBULATORIA" style="width:760px" >
+						<h:form id="formConsultaPaciente">
+			<div align="center">
+				<p:panel header="CONSULTAR PACIENTE" style="width:760px">
+					<h:panelGrid columns="5">
+						    <h:outputText value="Criterios de búsqueda:  "  />
+						    <p:selectOneMenu id="criterio" value="#{selectOneMenuView.console}">
+						            <f:selectItem itemLabel="Cédula de identidad" itemValue="ci" />
+						            <f:selectItem itemLabel="cedI" itemValue="apell" />
+						    </p:selectOneMenu> 
+						   
+						    <h:inputText id="crit" value="" size="25" required="true" readonly="true"/>
+					</h:panelGrid>
+					
+				</p:panel>
+			
+		 </div>	
+	   
+	    <p:panel header="Pacientes Encontrados">
+							<p:dataTable id="dgridPacientes" paginator="true"
+								rows="10"
+								paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								value="" var="art"
+								paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5,10"
+								emptyMessage="" paginatorPosition="bottom">
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="CI" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Apellidos" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Nombres" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								
+
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+                                       <p:commandLink
+											action="Seleccionar"  oncomplete="dlgPac.hide();"
+											ajax="false" disabled="">
+											<p:graphicImage value="/images/SELECCIONAR.ico"
+												title="AtenderPac" width="20"
+												height="20" />
+										</p:commandLink>
+                                </p:column>
+                   </p:dataTable>
+
+			  </p:panel>
+	    </h:form>
+	    
+						
+						<div align="left">
+						<p:panel header="Datos del paciente" style="width:745px" >	
+							<center>
+							<h:form>
+								<h:panelGrid columns="8">
+								<h:outputText  value="Tipo de atención: "  />
+							    <p:selectOneMenu id="tipoP" value="#{selectOneMenuView.console}">
+							            <f:selectItem itemLabel="Emergencia" itemValue="emergencia" />
+							            <f:selectItem itemLabel="Normal" itemValue="normal" />
+							            <f:selectItem itemLabel="Control" itemValue="control" />
+							            <f:selectItem itemLabel="Medicina preventiva" itemValue="medicinaPreventiva" />
+						         </p:selectOneMenu>
+							    <p:spacer width="10" />
+						        <h:outputText value="Fecha:  "  />
+						        <h:inputText id="fecha"
+									value="" size="25"
+									required="true" readonly="true" />
+								<p:spacer width="10" />
+						        <h:outputText value="Hora: "  />
+									  <h:inputText id="hora"
+										value="" size="10"
+										required="true" />
+						</h:panelGrid>
+								<p:spacer heigth="25"/>
+								
+									<h:panelGrid columns="8">
+										<h:outputText value="Paciente:  "  />
+									    <h:inputText id="pac"
+											value="" size="25"
+											required="true" readonly="true" />
+										
+										<p:spacer width="10" />
+										<h:outputText value="Cédula de identidad:  " />
+										<h:inputText id="cedulaI"
+											 value="" size="11"
+											required="true" readonly="true" />
+								   		
+								   		<p:spacer width="15" /> 
+																		  
+						               <h:outputText value="Tipo paciente"  />
+										<h:inputText id="tipoPac"  
+										value="" size="25"
+										required="true" readonly="true" />	
+									</h:panelGrid>	
+										<h:panelGrid columns="11">
+											<h:outputText value=" HCL:  "  />
+										    <h:inputText id="numerhcl"  
+												value="" size="15"
+												required="true"  readonly="true"/>	
+											
+											<p:spacer width="15" />			
+											<h:outputText value="Sexo:  "   />
+										    <h:inputText id="sexo"
+												value="" size="10"
+												required="true"  readonly="true"/>
+											
+											<p:spacer width="15" />
+											<h:outputText value="Edad:   "   />
+				   				            <h:inputText id="edada"
+												value="" size="10"
+												required="true"  readonly="true"/>
+											<p:spacer width="15" />	
+											<h:outputText value="Nacionalidad:   "   />
+										    <h:inputText id="nacionalidad"
+												value="" size="10"
+												required="true"  readonly="true"/>
+									   </h:panelGrid>
+								   </h:form>
+								   </center>
+							</p:panel>
+			            </div>
+		            <p:tabView style="width:745px" >
+		                    <p:tab title="Detalle de atención médica">
+			                       <p:accordionPanel multiple="true" activeIndex="tabHabitos0, tabSignosVitales1, tabMotivo2, tabExamenClinico3, tabDiagnostico4, tabTratamiento5, tabExamenesMedicos6">
+										      
+								        	<p:tab id="tabHabitos0" title="Hábitos, antecedentes y adicionales" >
+								        								            												        
+											        <h:panelGrid columns="2">
+												        <h:outputText value="Hábitos "  style="FONT-WEIGHT: bold;"/>
+												        <h:panelGroup> 
+												            <h:panelGrid columns="2" cellpadding="10">
+												               <h:outputText value="Alcoholismo "  />
+											                    <h:inputText id="alcohol"  value="" size="85"	required="true" />  
+													            <h:outputText value="Tabaquismo "  />
+											                     <h:inputText id="tabaco"  value="" size="85"	required="true" />    
+													            <h:outputText value="Otro "  />
+											                     <h:inputText id="otro"  value="" size="85"	required="true" /> 
+											                  </h:panelGrid>
+										                  </h:panelGroup>  
+									               
+											            <h:outputText value="Antecedentes "  style="FONT-WEIGHT: bold;"/>
+													    <h:panelGroup> 
+												            <h:panelGrid columns="2" cellpadding="10">
+													            <h:outputText value="Antecedentes familiares "  />
+											                    <p:inputTextarea style="width:400px;height:40px;" effectDuration="400" />
+											                    <h:outputText value="Antecedentes personales "  />
+											                    <p:inputTextarea style="width:400px;height:40px;" effectDuration="400" />
+											            </h:panelGrid>
+											            </h:panelGroup>  
+									               
+												          <h:outputText value="Adicionales "  style="FONT-WEIGHT: bold;"/>      
+										                  <h:panelGroup> 
+												            <h:panelGrid columns="2" cellpadding="10">
+												               <h:outputText value="Menarquia: "  />
+											                    <h:inputText id="mena"  value="" size="75"	required="true" />  
+													            <h:outputText value="Número de hijos: "  />
+											                    <h:inputText id="hijos"  value="" size="75"	required="true" />    
+													            <h:outputText value="Abortos: "  />
+											                    <h:inputText id="abort"  value="" size="75"	required="true" />
+													            <h:outputText value="Otro "  />
+											                     <h:inputText id="otro1"  value="" size="75"	required="true" /> 
+											                  </h:panelGrid>
+										                  </h:panelGroup>  
+										            </h:panelGrid>
+									           
+									        </p:tab>
+						            
+					          	            <p:tab id="tabSignosVitales1" title="Signos vitales" >
+										            <h:panelGrid columns="9" cellpadding="5">
+										            	 
+										            	 <h:outputText value="Peso : "  style="FONT-WEIGHT: bold;"/>
+												         <h:inputText id="peso" value="" size="10" required="true" />
+												         <p:spacer width="15" />
+												         <h:outputText value="Talla: "  style="FONT-WEIGHT: bold;"/>
+												         <h:inputText id="tall" value="" size="10" required="true" />
+												         <p:spacer width="15" />
+												         
+										            	 <h:outputText value="Temperatura : "  style="FONT-WEIGHT: bold;"/>
+												         <h:inputText id="temp" value="" size="10" required="true" />
+												         <p:spacer width="15" />
+												         <h:outputText value="Tensión arterial : "  style="FONT-WEIGHT: bold;"/>
+												         <h:inputText id="presion" value="" size="10" required="true" />
+												         <p:spacer width="15" />
+												         <h:outputText value="Pulso : "  style="FONT-WEIGHT: bold;"/>
+												         <h:inputText id="pul" value="" size="10" required="true" />
+												         <p:spacer width="15" />
+												       
+												         <h:outputText value="IMC : "  style="FONT-WEIGHT: bold;"/>
+												         <h:inputText id="pes" value="" size="10" required="true" />
+												         <p:spacer width="15" />
+												         <h:outputText value="Respiración : "  style="FONT-WEIGHT: bold;"/>
+												         <h:inputText id="talla" value="" size="10" required="true" />
+												   </h:panelGrid>
+									        </p:tab>
+										      
+							     	        <p:tab id="tabMotivo2" title="Motivo" >
+										            <h:panelGrid columns="2" cellpadding="10">
+										            	<p:inputTextarea style="width:600px;height:50px;" effectDuration="400" /> 
+													</h:panelGrid>
+									        </p:tab>
+										        
+										    <p:tab id="tabExamenC3" title="Examen clínico" >
+										            <h:panelGrid columns="2" cellpadding="10">
+										                    <p:inputTextarea style="width:600px;height:50px;" effectDuration="400" />    
+										            </h:panelGrid>
+										    </p:tab>
+										        
+									        <p:tab id="tabDiagnostico4" title="Diagnóstico" >
+									              <h:panelGrid columns="2" cellpadding="10">
+											          <h:outputText value="Topografía "  style="FONT-WEIGHT: bold;"/>
+											          <h:panelGroup> 
+											               <h:panelGrid columns="2" cellpadding="10">
+												              
+											                   <h:outputText value="Grupo topográfico "  />
+											                   <p:selectOneMenu id="Grupotopográfico" value="#{selectOneMenuView.console}">
+							                                      <f:selectItem itemLabel="grupo_topografico" itemValue="ci" />
+							                                    </p:selectOneMenu>
+							                                    <h:outputText value="Subtipo topográfico "  />
+													            <p:selectOneMenu id="Subtipotopográfico" value="#{selectOneMenuView.console}">
+							                                      <f:selectItem itemLabel="subtipo_topografico" itemValue="ci" />
+							                                    </p:selectOneMenu>
+													            <h:outputText value="Observaciones "  />
+											                     <h:inputText id="obs"  value="" size="75"	required="true" /> 
+										                     </h:panelGrid>
+									                   </h:panelGroup>    
+													    
+												      </h:panelGrid>
+									         </p:tab>
+													     <!--    <p:commandLink id="nuevoDiag" onclick="dlgDiag.show();" update=":formRegistroDiagnostico" >
+																<p:graphicImage value="/images/nuevo1.gif"
+																	title="Nuevo Diagnóstico" width="35" height="35">
+																</p:graphicImage>
+														    </p:commandLink> --> 
+													
+									        <p:tab id="tabTratamiento5" title="Tratamiento">
+									            <h:panelGrid columns="2" cellpadding="10">
+									            <p:inputTextarea style="width:600px;height:50px;" effectDuration="400" />    
+									            </h:panelGrid>
+									        </p:tab>
+									        <p:tab id="tabExamenesMedicos6" title="Exámenes médicos" >
+									            <h:panelGrid columns="2" cellpadding="10">
+									            <p:inputTextarea style="width:600px;height:50px;" effectDuration="400" />    
+									            </h:panelGrid>
+								            </p:tab>
+						             </p:accordionPanel>
+									 <p:spacer width="10" height="10" />
+									 <center>
+										 <h:panelGroup>	
+											 <p:commandLink id="Emitir_orden_medicación">
+													<p:graphicImage value="/images/aprobar.png" title="Emitir orden de medicación"
+													width="32" height="32"/>
+											  </p:commandLink>	
+										
+										 </h:panelGroup>	
+										 <p:commandLink id="Guardar"			>
+												<p:graphicImage value="/images/guardar.png" title="Guardar"
+												width="32" height="32"/>
+										 </p:commandLink>	
+										 <p:spacer width="25" height="15" />
+									 
+									 </center>	
+							  
+			                </p:tab>
+					        <p:tab title="Consultar historial clínico">
+							          <p:panel header=" Consultar historial clínico  del paciente">
+							          <h:form>
+							          <h:panelGrid columns="2" cellpadding="10">
+							              <h:outputText  value="Fecha : "  style="FONT-WEIGHT: bold;"/>
+														 <h:inputText id="fecha"
+															value="" size="10"
+															required="true"  />
+										  <center>
+												 <h:panelGroup>	
+												  <p:commandLink id="Buscar">
+													   	<p:graphicImage value="/images/buscar6.png" title="Buscar"
+														width="32" height="32"/>
+												  </p:commandLink>	
+												 </h:panelGroup>	
+											</center>	
+															  
+							            </h:panelGrid>  
+							            <p:dataTable id="dgridPacientesA" paginator="true"
+										rows="10"
+										paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+										value="" var="art"
+										paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5,10"
+										emptyMessage="" paginatorPosition="bottom">
+										<p:column width="20">
+											<f:facet name="header">
+												<h:outputText value="N.-" />
+											</f:facet>
+													<h:outputText value="" />
+												</p:column>
+												<p:column width="80">
+													<f:facet name="header">
+														<h:outputText value="Fecha" />
+													</f:facet>
+													<h:outputText value="" />
+												</p:column>
+												<p:column width="80">
+													<f:facet name="header">
+														<h:outputText value="Signos vitales" />
+													</f:facet>
+													<h:outputText value="" />
+												</p:column>
+												<p:column width="60">
+													<f:facet name="header">
+														<h:outputText value="Motivo" />
+													</f:facet>
+													<h:outputText value="" />
+												</p:column>
+												<p:column width="60">
+													<f:facet name="header">
+														<h:outputText value="Diagnóstico" />
+													</f:facet>
+													<h:outputText value=""/>
+												</p:column>
+				                                <p:column width="80">
+													<f:facet name="header">
+														<h:outputText value="Tratamiento" />
+													</f:facet>
+													<h:outputText value="" />
+												</p:column>
+												
+												<p:column width="100">
+													<f:facet name="header">
+														<h:outputText value="Acciones" />
+													</f:facet>
+				
+													<p:commandLink
+														action="Visualizar"
+														ajax="false" disabled="">
+														<p:graphicImage value="/images/verDetalles.PNG"
+															title="Mostrar detalles" width="25"
+															height="25" />
+													</p:commandLink>
+													<p:spacer height="5px" width="10px" />
+												
+											     </p:column>
+				
+								       </p:dataTable>
+							            
+							        </h:form> 
+							
+									
+			           	           
+						       </p:panel>
+			             </p:tab>
+	             			<p:tab id="tabOrden2" title="Emitir órden de despacho de medicación" ajax="false">
+	             			</p:tab>
+	             </p:tabView>       
+	   	  <!--  -->
+	           </p:panel>
+	       </div>
+	    </h:form>  			
+ 	     <p:dialog  id="registroDiag" header="Registro Diagnóstico" widgetVar="dlgDiag" modal="true" >
+				<h:form  id="formRegistroDiagnostico">
+				     <fieldset style="border-color: #66CCFF; border-style: solid;">
+							<h:panelGrid columns="2">
+								<h:outputText value="Código Diagnóstico: " />
+								<p:inputText id="codD"
+									value="" />
+								<h:outputText value="Nombre Diagnóstico: " />
+								<p:inputText id="NomD"
+									value="" />
+								<h:outputText value="Descripción: " />
+								<p:inputText id="desc"
+									value=""
+									maxlength="100" required="true" 	/>
+								
+							</h:panelGrid>
+						</fieldset>
+						<p:spacer height="30"/>
+		      			<center>
+			      			<h:panelGrid columns="1">
+									<h:panelGroup>
+										<p:commandLink id="guardarDiag" process="formRegistroDiagnostico" >
+											<p:graphicImage value="/images/GUARDARNuevo.png"
+												title="Guardar" width="35" height="35">
+											</p:graphicImage>
+										</p:commandLink>
+										<p:spacer width="20px" height="5px" />
+									  	<p:commandLink oncomplete="dlgDiag.hide();">
+											<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+												width="36" height="35" />
+										</p:commandLink>
+									</h:panelGroup>
+							 </h:panelGrid>
+						 </center>
+				 </h:form>
+		 </p:dialog>
+	     
+	    <p:dialog id="dialogPaciente" widgetVar="dlgConsPac" modal="true">
+		
+	 </p:dialog>  
+	 
+
+						
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<ui:composition template="/templates/common.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:v="http://validators.epn.edu.ec.com">
+      
+	<ui:define name="pageTitle">Registrar Ajuste Excedente de Insumos Médicos</ui:define>
+	<ui:define name="body">
+	     <h:form>	
+	     <center>	
+	     <p:panel header="Registro Ajuste Excedente de Insumos Médicos">
+	              <h:form >
+	              <div align="right">
+	               <h:outputText value="Fecha : " style="FONT-WEIGHT: bold;"/>
+				   <h:inputText id="fecha"
+						value="" size="13"
+						required="true" readonly="true" />  <!-- debe tomar la fecha actual -->      
+	               
+	                </div>
+	                </h:form>
+	                <center>
+					 <h:panelGroup>	
+					
+					  <p:commandLink id="Buscar" onclick="dlgAjExcedente.show()" ajax="true">
+					  <p:graphicImage value="/images/buscar6.png" title="Buscar"
+							width="32" height="32"/>
+					 </p:commandLink>
+					 </h:panelGroup>	
+					 </center>
+					  <p:spacer height="20px" width="10px" />	
+					<p:dataTable id="dgridRegistrarBaja" paginator="true"
+						rows="10"
+						paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+						value="" var="baja"
+						paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5"
+						emptyMessage="" paginatorPosition="bottom">
+						<p:column width="20">
+							<f:facet name="header">
+								<h:outputText value="N.-" />
+							</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80" >
+									<f:facet name="header" >
+										<h:outputText value="Nombre genérico" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="60" >
+									<f:facet name="header">
+										<h:outputText value="FFyC" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="60">
+									<f:facet name="header" >
+										<h:outputText value="Cant. actual"  />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="60"  >
+									<f:facet name="header" >
+										<h:outputText value="Cant. excedente" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								
+								<p:column width="50" >
+									<f:facet name="header">
+										<h:outputText value="Cant. total" />
+									</f:facet>
+									<h:outputText value=""/>
+								</p:column>
+								
+								<p:column width="50" >
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+                                    <p:commandLink
+										action="Editar"
+										ajax="false" disabled="">
+										<p:graphicImage value="/images/edit.ico"
+											title="Guardar" width="20"
+											height="20" />
+									</p:commandLink>
+									<p:spacer height="5px" width="10px" />
+									
+																
+									<p:commandLink oncomplete="cd.show()"
+								                    disabled="">
+										<p:graphicImage value="/images/eliminar24.ico" title="Cancelar"
+											style="border:0px solid #CAD6E0;" height="20" width="20"></p:graphicImage>
+								</p:commandLink>
+									
+
+							</p:column>
+
+						</p:dataTable>
+                       <h:panelGrid columns="2">
+                       <h:outputText value="Motivo" />
+                       <p:inputTextarea style="width:400px;height:50px;" effectDuration="400" /> 
+                       <h:outputText value="N.- Documento" />
+                       <p:inputText id="nDoc"
+						value="" size="13" /> 
+                       </h:panelGrid>   
+                       <h:panelGrid columns="5">
+                                   <p:commandLink
+										action="Imprimir"
+										ajax="false" disabled="">
+										<p:graphicImage value="/images/imprime.jpg"
+											title="Guardar" width="20"
+											height="20" />
+									</p:commandLink>
+									<p:spacer height="5px" width="10px" />
+                                   
+                                   <p:commandLink
+										action="Guardar"
+										ajax="false" disabled="">
+										<p:graphicImage value="/images/GUARDARNuevo.png"
+											title="Guardar" width="20"
+											height="20" />
+									</p:commandLink>
+									<p:spacer height="5px" width="10px" />
+									
+																
+									<p:commandLink oncomplete="cd.show()"
+								            disabled="">
+								           <p:graphicImage value="/images/eliminar24.ico" title="Cancelar"
+									       style="border:0px solid #CAD6E0;" height="20" width="20"></p:graphicImage>
+								</p:commandLink>   
+						</h:panelGrid>
+				</p:panel>
+	     </center>
+	    </h:form>
+	 <p:dialog id="dialogAjusteF" widgetVar="dlgAjExcedente" modal="true">
+		<h:form id="formRegistroAjusteExcedente">
+			<div align="center">
+				<p:panel header="CONSULTAR INSUMO MÉDICO" style="width:760px">
+					<h:panelGrid columns="2">
+						<h:outputText value="Nombre genérico:  " style="FONT-WEIGHT: bold;" align="left" />
+						<h:inputText id="nomG"
+							value="" size="20"
+							required="true" />
+							
+						<h:outputText value="FFyC  " style="FONT-WEIGHT: bold;"/>
+					    <h:inputText id="FFyC"
+							value="" size="20"
+							required="true" />
+						
+					 </h:panelGrid>
+					 <center>
+					 <h:panelGroup>	
+					  <p:commandLink id="Buscar"
+						    update="dgridInsumosEncontrados">
+							<p:graphicImage value="/images/buscar6.png" title="Buscar"
+							width="32" height="32"/>
+					  </p:commandLink>	
+					 </h:panelGroup>	
+					 </center>	
+				</p:panel>
+			
+		 </div>	
+	   
+	    <p:panel header="Insumos médicos encontrados">
+							<p:dataTable id="dgridInsumosEncontrados" paginator="true"
+								rows="10"
+								paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								value="" var="art"
+								paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5,10"
+								emptyMessage="" paginatorPosition="bottom">
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Código" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Nombre genérico" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="FFyC" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Cantidad actual" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+                                       <p:commandLink
+											action="Seleccionar"  oncomplete="dlgAjExcedente.hide();"
+											ajax="false" disabled="">
+											<p:graphicImage value="/images/SELECCIONAR.ico"
+												title="Seleccionar Insumo " width="20"
+												height="20" />
+										</p:commandLink>
+                                </p:column>
+                   </p:dataTable>
+
+			  </p:panel>
+	    </h:form>
+	 </p:dialog>   
+	
+	</ui:define>
+</ui:composition>
+	

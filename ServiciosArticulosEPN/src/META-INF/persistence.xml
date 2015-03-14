@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="ServiciosArticulosEPN"
+		transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/SeguridadEPNDS</jta-data-source>
+		<class>ec.edu.epn.articulos.entities.AreaInvestigacion</class>
+		<class>ec.edu.epn.articulos.entities.Articulo</class>
+		<class>ec.edu.epn.articulos.entities.Convocatoria</class>
+		<class>ec.edu.epn.articulos.entities.EstadoA</class>
+		<class>ec.edu.epn.articulos.entities.ObservacionArticulo</class>
+		<class>ec.edu.epn.articulos.entities.Revisor</class>
+		<class>ec.edu.epn.articulos.entities.RevisorObservacione</class>
+		<class>ec.edu.epn.articulos.entities.TipoRev</class>
+		<class>ec.edu.epn.usuarios.entities.Perfil</class>
+		<class>ec.edu.epn.usuarios.entities.Usuario</class>
+		<class>ec.edu.epn.rrhh.entities.Emp</class>
+		<class>ec.edu.ec.gestionDocente.entities.Publicacione</class>
+		<class>ec.edu.epn.articulos.entities.Volumen</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="false" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>

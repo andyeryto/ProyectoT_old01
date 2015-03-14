@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:v="http://validators.epn.edu.ec.com">
+	<ui:define name="pageTitle">Artículos</ui:define>
+	<ui:define name="pageHeader">Registro de Documento del Artículo</ui:define>
+	<ui:define name="body">
+
+		<h:form id="formDocumento">
+			<center>
+				<p:panel id="panelPrincipal" header="Datos de Artículo"
+					style="width:750px" styleClass="myPanelCentrado">
+
+					<p:panel header="Artculo" styleClass="myPanelNormal">´
+					<h:panelGrid columns="2">
+
+							<h:outputLabel value="Código" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{articulosBackingBean.articuloInfo.auxAutogenerado}"
+									size="20" readonly="true" />
+								<p:spacer width="20" height="5"></p:spacer>
+							</h:panelGroup>
+
+							<h:outputLabel value="Fecha de Ingreso" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{articulosBackingBean.articuloInfo.fechaEnvio}"
+									size="60" readonly="true">
+									<f:convertDateTime pattern="yyyy-MM-dd" />
+								</p:inputText>
+								<p:spacer width="20" height="5"></p:spacer>
+							</h:panelGroup>
+
+
+							<h:outputLabel value="Título" />
+							<h:panelGroup>
+								<p:inputTextarea
+									value="#{articulosBackingBean.articuloInfo.tituloArticulo}"
+									size="60" readonly="true" />
+								<p:spacer width="20" height="5"></p:spacer>
+							</h:panelGroup>
+							<h:outputLabel value="Convocatoria" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{articulosBackingBean.articuloInfo.convocatoria.nombreConvo}"
+									readonly="true" />
+							</h:panelGroup>
+							<h:outputLabel value="Area de Investigación" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{articulosBackingBean.articuloInfo.areaInvestigacion.nombreArea}"
+									readonly="true" size="20"/>
+							</h:panelGroup>
+
+							<h:outputLabel value="Participación" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{articulosBackingBean.articuloInfo.participacionArticulo}"
+									readonly="true" />
+							</h:panelGroup>
+
+							<h:outputLabel value="Palabras Clave" />
+							<h:panelGroup>
+								
+									<p:inputTextarea
+									value="#{articulosBackingBean.articuloInfo.palabrasClave}"
+									readonly="true" />
+							</h:panelGroup>
+
+							<h:outputLabel value="Breve Resumen" />
+							<h:panelGroup>
+								<p:inputTextarea
+									value="#{articulosBackingBean.articuloInfo.breveResumen}"
+									readonly="true" />
+							</h:panelGroup>
+							
+							<h:outputText value="Documento" />
+						<h:panelGroup>
+							<p:selectOneRadio id="tipoDocArt"
+								value="#{articulosBackingBean.articuloInfo.tipoDocumento}" >
+								<f:selectItem itemLabel="INICIAL" itemValue="INICIAL" />
+								<f:selectItem itemLabel="CON CAMBIOS" itemValue="CON CAMBIOS" />
+							</p:selectOneRadio>
+							</h:panelGroup>
+
+
+						</h:panelGrid>
+
+
+					</p:panel>
+
+					<p:panel header="Documento digitalizado del artículo"
+						styleClass="myPanelNormal">
+
+
+						<p:commandButton id="botonSubirDocumento" value="Subir documento"
+							ajax="false" action="uploadArticulo" />
+
+
+						<h:panelGrid
+							rendered="#{(not empty articulosBackingBean.articuloInfo.pathDocumento) or (not articulosBackingBean.articuloEdit.pathDocumento eq '')}">
+							<p:commandButton id="download" value="Descargar documento"
+								ajax="false"
+								actionListener="#{articulosBackingBean.handleDownload}"
+								onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)">
+								<p:fileDownload value="#{articulosBackingBean.remoteFile}" />
+							</p:commandButton>
+						</h:panelGrid>
+
+
+
+
+						<p:remoteCommand name="deleteTempFile"
+							action="#{registroContratosBackingBean.deleteTempFile}">
+						</p:remoteCommand>
+
+					</p:panel>
+
+					<h:panelGrid columns="1">
+						<h:panelGroup>
+							<p:commandLink id="guardarDocumentoArt" process="formDocumento,@this,tipoDocArt"
+								actionListener="#{articulosBackingBean.actualizarArticuloPath}"
+								update="botonSubirDocumento,formDocumento,msgs,msgSaveDocArt" ajax="false">
+								<p:graphicImage value="/images/GUARDARNuevo.png" title="Guardar"
+									width="35" height="35">
+								</p:graphicImage>
+							</p:commandLink>
+							<p:spacer width="20px" height="5px" />
+							<h:outputLink
+								value="${request.contextPath}/pages/registroArticulos.jsf">
+								<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+									width="35" height="35" />
+							</h:outputLink>
+						</h:panelGroup>
+					</h:panelGrid>
+					
+					<h:panelGrid id="msgs" columns="1">
+						<p:message id="msgSaveDocArt" for="guardarDocumentoArt" />
+					</h:panelGrid>
+
+
+
+
+
+				</p:panel>
+			</center>
+		</h:form>
+	</ui:define>
+</ui:composition>

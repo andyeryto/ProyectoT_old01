@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:v="http://validators.epn.edu.ec.com">
+
+	<ui:define name="pageTitle">Observación de Artículos</ui:define>
+	<ui:define name="body">
+
+
+		<center>
+			<h:form id="buscarArticulos">
+				<p:panel header="Buscar Artículos" style="width:760px;">
+					<h:panelGrid columns="2">
+						<h:outputText value="Código" />
+						<p:inputText value="#{observArticulo.idArticulo}" id="idArt" />
+
+						<h:outputText value="Título" />
+						<p:inputTextarea value="#{observArticulo.titulo}" id="idTitul"
+							rows="2" cols="35"></p:inputTextarea>
+						<h:outputText value="" />
+						<h:outputText value="" />
+
+						<h:outputText value="Texto Resúmen" />
+						<p:inputTextarea value="#{observArticulo.palabrasclave}"
+							id="idTxt" rows="2" cols="35"></p:inputTextarea>
+						<h:outputText value="" />
+						<h:outputText value="" />
+
+
+
+						<h:outputText value="Fecha Presentación:  " />
+						<h:outputText value="" />
+						<h:outputText value="" />
+						<h:outputText value="" />
+
+						<h:outputText value="Desde : " />
+						<h:panelGroup>
+							<p:calendar pattern="dd-MM-yyyy" locale="es"
+								value="#{observArticulo.fechadesde}" mode="popup"
+								required="true" showOn="button" navigator="true"
+								id="fechainicio" showButtonPanel="true"
+								requiredMessage="Debe seleccionar una fecha"></p:calendar>
+
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+
+						<h:outputText value="Hasta : " />
+						<h:panelGroup>
+							<p:calendar pattern="dd-MM-yyyy" locale="es"
+								value="#{observArticulo.fechaHasta}" mode="popup"
+								required="true" showOn="button" navigator="true" id="fechafin"
+								showButtonPanel="true"
+								requiredMessage="Debe seleccionar una fecha"></p:calendar>
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+						<h:outputText value="Estado : " />
+						<h:panelGroup>
+							<p:selectOneMenu id="estadoArticulo"
+								value="#{observArticulo.idEstado}" required="true"
+								requiredMessage="Debe seleccionar un Área de Investigación">
+								<f:selectItem itemLabel="Por Favor Seleccione" itemValue="" />
+								<f:selectItems value="#{estados.listaEstado}" var="estado"
+									itemLabel="#{estado.nombreE}" itemValue="#{estado.idEstadoa}" />
+							</p:selectOneMenu>
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+					</h:panelGrid>
+
+					<p:commandLink id="BuscarArt"
+						action="#{observArticulo.buscarObservaArticulo()}"
+						update=":listaArticulos,idArt,idTxt,idTitul,fechainicio,fechafin,estadoArticulo,msgBuscae,msgFechainicio,msgFechainicio,buscarArticulos,ksgAreaInvs"
+						process="@this,idArt,idTxt,idTitul,fechainicio,fechafin,estadoArticulo">
+						<p:graphicImage value="/images/buscar6.png" title="Buscar"
+							style="border:0px solid #CAD6E0;" />
+					</p:commandLink>
+					<h:panelGrid columns="1">
+						<p:message id="msgBuscae" for="BuscarArt" />
+						<p:message id="msgFechainicio" for="fechainicio" />
+						<p:message id="msgFechaFin" for="fechafin" />
+						<p:message id="ksgAreaInvs" for="estadoArticulo"></p:message>
+					</h:panelGrid>
+					<f:facet name="footer">
+						<p:graphicImage value="/images/asterisk-icon.png" width="10"
+							height="10" />
+						<p:spacer width="5" height="5" />
+						<h:outputText value="Campos obligatorios" />
+					</f:facet>
+				</p:panel>
+
+			</h:form>
+
+		</center>
+
+
+		<center>
+			<h:form id="listaArticulos">
+				<p:panel header=" Lista de Artículos " styleClass="myPanelCentrado">
+					<p:dataTable id="articulosDataTable" paginator="true"
+						nemptyMessage="Para ver las artículos existentes presione en Buscar"
+						rows="10" rowsPerPageTemplate="3,6,10" var="observ"
+						value="#{observArticulo.listObservArticulos}"
+						paginatorPosition="bottom"
+						paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
+
+						<p:column width="80">
+							<f:facet name="header">
+								<h:outputText value="Código" />
+							</f:facet>
+							<h:outputText id="artCod"
+								value="#{observ.articulo.auxAutogenerado}" />
+						</p:column>
+
+						<p:column width="150">
+							<f:facet name="header">
+								<h:outputText value="Título" />
+							</f:facet>
+							<h:outputText id="artTitulo"
+								value="#{observ.articulo.tituloArticulo}" />
+						</p:column>
+						<p:column width="90">
+							<f:facet name="header">
+								<h:outputText value="Fecha Presentación" />
+							</f:facet>
+							<h:outputText id="artFecha" value="#{observ.articulo.fechaEnvio}" />
+						</p:column>
+						<p:column width="70">
+							<f:facet name="header">
+								<h:outputText value="Estado" />
+							</f:facet>
+							<h:outputText id="artEstado"
+								value="#{observ.articulo.estadoA.nombreE}" />
+						</p:column>
+
+						<p:column width="150">
+							<f:facet name="header">
+								<h:outputText value="Presentado por: " />
+							</f:facet>
+							<h:outputText id="nomPresent"
+								value="#{observ.articulo.emp_1.nom} #{observ.articulo.emp_1.apel}" />
+
+
+						</p:column>
+
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Acciones" />
+							</f:facet>
+							<center>
+								<p:commandLink
+									disabled="#{(observ.articulo.estadoA.nombreE eq 'APROBADO') or (observ.articulo.estadoA.nombreE eq 'RECHAZADO')} "
+									action="registrarObservaciones" ajax="false"
+									rendered="#{(observ.articulo.estadoA.nombreE eq 'INGRESADO')}">
+									<p:graphicImage value="/images/revision.jpg" title="Revisar"
+										width="30" height="30" />
+									<f:setPropertyActionListener
+										target="#{observArticulo.revisorInfo}" value="#{observ}"></f:setPropertyActionListener>
+								</p:commandLink>
+							</center>
+						</p:column>
+					</p:dataTable>
+
+				</p:panel>
+
+			</h:form>
+
+		</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</ui:define>
+</ui:composition>

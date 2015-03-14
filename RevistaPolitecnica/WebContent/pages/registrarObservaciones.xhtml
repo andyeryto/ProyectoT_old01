@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<ui:composition template="/templates/common.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:v="http://validators.epn.edu.ec.com">
+      
+	<ui:define name="pageTitle">Registro de Observaciones</ui:define>
+	<ui:define name="body">
+	
+	<h:form id="formDocumento">
+			<center>
+				<p:panel id="panelPrincipal" header="Datos de Artículo"
+					style="width:750px" styleClass="myPanelCentrado">
+
+					<p:panel header="Artculo" styleClass="myPanelNormal">´
+					<h:panelGrid columns="2">
+
+							<h:outputLabel value="Código" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{observArticulo.revisorInfo.articulo.auxAutogenerado}"
+									size="20" readonly="true" />
+								<p:spacer width="20" height="5"></p:spacer>
+							</h:panelGroup>
+
+							<h:outputLabel value="Fecha de Ingreso" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{observArticulo.revisorInfo.articulo.fechaEnvio}"
+									size="60" readonly="true">
+									<f:convertDateTime pattern="yyyy-MM-dd" />
+								</p:inputText>
+								<p:spacer width="20" height="5"></p:spacer>
+							</h:panelGroup>
+
+
+							<h:outputLabel value="Título" />
+							<h:panelGroup>
+								<p:inputTextarea
+									value="#{observArticulo.revisorInfo.articulo.tituloArticulo}"
+									size="60" readonly="true" />
+								<p:spacer width="20" height="5"></p:spacer>
+							</h:panelGroup>
+							<h:outputLabel value="Convocatoria" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{observArticulo.revisorInfo.articulo.convocatoria.nombreConvo}"
+									readonly="true" />
+							</h:panelGroup>
+							<h:outputLabel value="Area de Investigación" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{observArticulo.revisorInfo.articulo.areaInvestigacion.nombreArea}"
+									readonly="true" />
+							</h:panelGroup>
+
+							<h:outputLabel value="Participación" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{observArticulo.revisorInfo.articulo.participacionArticulo}"
+									readonly="true" />
+							</h:panelGroup>
+
+							<h:outputLabel value="Palabras Clave" />
+							<h:panelGroup>
+								<p:inputText
+									value="#{observArticulo.revisorInfo.articulo.palabrasClave}"
+									readonly="true" />
+							</h:panelGroup>
+
+							<h:outputLabel value="Breve Resumen" />
+							<h:panelGroup>
+								<p:inputTextarea
+									value="#{observArticulo.revisorInfo.articulo.breveResumen}"
+									readonly="true" />
+							</h:panelGroup>
+
+
+						</h:panelGrid>
+
+
+					</p:panel>
+
+					<p:panel header="Documento digitalizado del artículo"
+						styleClass="myPanelNormal">
+						<h:panelGrid
+							rendered="#{(not empty observArticulo.revisorInfo.articulo.pathDocumento) or (not observArticulo.revisorInfo.articulo.pathDocumento eq '')}">
+							<p:commandButton id="download" value="Descargar documento"
+								ajax="false"
+								actionListener="#{observArticulo.handleDownload}"
+								onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)">
+								<p:fileDownload value="#{observArticulo.remoteFile}" />
+							</p:commandButton>
+						</h:panelGrid>
+
+					</p:panel>
+					
+					<p:panel header="Observaciones">
+					<center>
+					
+							<br />
+							<h:panelGroup>
+								<p:inputTextarea
+									value="#{observArticulo.nuevaObservacion.observacion}"
+									size="60" cols="80" rows="10" id="observaciones" />
+								<p:spacer width="20" height="5"></p:spacer>
+							</h:panelGroup>
+					<br />
+					<h:outputText value="¿Está deacuerdo para la publicación de este artículo?" />
+					<br />
+						<h:panelGroup>
+							<p:selectOneRadio id="deacuerdo"
+								value="#{observArticulo.nuevaObservacion.estado}" >
+								<f:selectItem itemLabel="SI" itemValue="SI" />
+								<f:selectItem itemLabel="NO" itemValue="NO" />
+							</p:selectOneRadio>
+
+						</h:panelGroup>
+					</center>
+					</p:panel>
+					<h:panelGrid columns="1">
+						<h:panelGroup>
+							<p:commandLink id="guardaroBSERVaRTICULO" process="formDocumento"
+								actionListener="#{observArticulo.guardarObservacion}"
+								update="formDocumento,msgs,msgSaveDocArt,msgCombo,msgObsv" ajax="false">
+								<p:graphicImage value="/images/GUARDARNuevo.png" title="Guardar"
+									width="35" height="35">
+								</p:graphicImage>
+							</p:commandLink>
+							<p:spacer width="20px" height="5px" />
+							<h:outputLink
+								value="${request.contextPath}/pages/observacionArticulo.jsf">
+								<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+									width="35" height="35" />
+							</h:outputLink>
+						</h:panelGroup>
+					</h:panelGrid>
+					
+					<h:panelGrid id="msgs" columns="1">
+						<p:message id="msgSaveDocArt" for="guardaroBSERVaRTICULO" />
+						<p:message id="msgCombo" for="deacuerdo" />
+						<p:message id="msgObsv" for="observaciones" />
+					
+						
+					</h:panelGrid>
+
+
+
+
+
+				</p:panel>
+			</center>
+		</h:form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</ui:define>
+</ui:composition>

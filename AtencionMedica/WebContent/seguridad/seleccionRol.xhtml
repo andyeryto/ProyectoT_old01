@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="pageTitle">ModeloWEB - TITLE</ui:define>
+
+	<ui:define name="body">
+		<center>
+			<p:panel style="width:300px;">
+				<div style="font-family: Arial; font-size: 16; font-weight: bold">Selección de Rol:</div>
+			Por favor seleccione el rol con el que desea trabajar: 
+			<br />
+				<br />
+				<h:form>
+					<h:panelGrid columns="1">
+					<p:selectOneMenu id="selectorMenu" value="#{sesionUsuario.perfilSeleccionado}">
+						<f:selectItems value="#{sesionUsuario.perfiles}"/>
+					</p:selectOneMenu>
+					</h:panelGrid>
+					<br />
+					<br />
+					<p:commandButton value="Seleccionar" action="#{sesionUsuario.seleccionRol}" />
+				</h:form>
+			</p:panel>
+		</center>
+
+	</ui:define>
+
+</ui:composition>

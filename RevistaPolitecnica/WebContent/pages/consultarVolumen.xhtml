@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<ui:composition template="/templates/common.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:v="http://validators.epn.edu.ec.com">
+      
+	<ui:define name="pageTitle">Consultar Volúmenes</ui:define>
+	<ui:define name="body">
+	
+	
+	<center>
+			<h:form id="buscarArticulos">
+				<p:panel header="Buscar Artículos que se publicarán en el Volumen"
+					style="width:760px;">
+					<h:panelGrid columns="2">
+					
+						<h:outputText value="Volumen : " />
+						<h:panelGroup>
+							<p:selectOneMenu id="idvol" required="true"
+								requiredMessage="Debe seleccionar el volumen" value="#{volumen.idvolumen}">
+								<f:selectItem itemLabel="Por Favor Seleccione" itemValue="" />
+								<f:selectItems value="#{volumen.listavolumen}"
+									var="vol" itemLabel="#{vol.nombreVol}"
+									itemValue="#{vol.idVol}" />
+							</p:selectOneMenu>
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+					</h:panelGrid>
+
+
+					<p:commandLink id="BuscarArt"
+						action="#{volumen.buscarArticulosporVolumen()}"
+						update=":listaArticulos,idvol,msgBuscae,ksgAreaInvs"
+						process="@this,idvol">
+						<p:graphicImage value="/images/buscar6.png" title="Buscar"
+							style="border:0px solid #CAD6E0;" />
+					</p:commandLink>
+					<h:panelGrid columns="1">
+						<p:message id="msgBuscae" for="BuscarArt" />
+						<p:message id="ksgAreaInvs" for="idvol"></p:message>
+					</h:panelGrid>
+					<f:facet name="footer">
+						<p:graphicImage value="/images/asterisk-icon.png" width="10"
+							height="10" />
+						<p:spacer width="5" height="5" />
+						<h:outputText value="Campos obligatorios" />
+					</f:facet>
+				</p:panel>
+
+			</h:form>
+
+		</center>
+
+
+
+		<center>
+			<h:form id="listaArticulos">
+				<p:panel header=" Lista de Artículos Aprobados"
+					styleClass="myPanelCentrado">
+					<p:dataTable id="articulosDataTable" paginator="true"
+						nemptyMessage="Para ver las artículos existentes presione en Buscar"
+						rows="10" rowsPerPageTemplate="3,6,10" var="artivol"
+						value="#{volumen.listaArticulosVolumen}"
+						paginatorPosition="bottom"
+						paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
+
+						<p:column width="80">
+							<f:facet name="header">
+								<h:outputText value="Código" />
+							</f:facet>
+							<h:outputText id="artCod" value="#{artivol.auxAutogenerado}" />
+						</p:column>
+
+						<p:column width="150">
+							<f:facet name="header">
+								<h:outputText value="Título" />
+							</f:facet>
+							<h:outputText id="artTitulo" value="#{artivol.tituloArticulo}" />
+						</p:column>
+
+
+						<p:column width="150">
+							<f:facet name="header">
+								<h:outputText value="Presentado por: " />
+							</f:facet>
+							<h:outputText id="nomPresent"
+								value="#{artivol.emp_1.nom} #{artivol.emp_1.apel}" />
+
+
+						</p:column>
+
+
+						
+					</p:dataTable>
+
+				</p:panel>
+
+
+			<p:commandLink id="BuscarArt"
+						action="imprimirvolumen"
+						>
+						<p:graphicImage value="/images/imprime.jpg" title="Imprimir"
+							style="border:0px solid #CAD6E0;" />
+			</p:commandLink>
+
+
+			</h:form>
+
+		</center>
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-time="1" hostname="localhost" id="JBoss 7.1 Runtime Server1" name="JBoss 7.1 Runtime Server" org.jboss.ide.eclipse.as.core.server.attributes.startupPollerKey="org.jboss.ide.eclipse.as.core.server.JBoss7ManagerServicePoller" org.jboss.ide.eclipse.as.core.server.deployDirectoryType="server" org.jboss.ide.eclipse.as.core.server.serverMode="local" org.jboss.ide.eclipse.as.core.server.webPort="80" org.jboss.ide.eclipse.as.core.server.webPortAutoDetect="true" org.jboss.ide.eclipse.as.core.server.webPortAutoDetect.XPath="Ports/JBoss Web" runtime-id="JBoss 7.1 Runtime" server-type="org.jboss.ide.eclipse.as.71" server-type-id="org.jboss.ide.eclipse.as.71" start-timeout="450" stop-timeout="450" timestamp="7">
+    <list key="modules" value0="cas::org.eclipse.jst.jee.server:cas::jst.web::2.5" value1="ServiciosSeguridadEPN::org.eclipse.jst.jee.server:ServiciosSeguridadEPN::jst.ejb::3.0" value2="ServiciosRRHHEPN::org.eclipse.jst.jee.server:ServiciosRRHHEPN::jst.ejb::3.0" value3="AtencionMedica::org.eclipse.jst.jee.server:AtencionMedica::jst.web::3.0"/>
+  </server>
+</servers>

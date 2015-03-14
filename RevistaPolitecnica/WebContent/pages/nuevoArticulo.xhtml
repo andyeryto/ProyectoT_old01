@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:v="http://validators.epn.edu.ec.com">
+	<ui:define name="pageTitle">Artículos</ui:define>
+	<ui:define name="pageHeader">Ingreso de Artículo</ui:define>
+	<ui:define name="body">
+
+		<h:form id="formIngresoArticulo">
+			<div align="center">
+				<p:panel header="Ingreso de Artículo" style="width:610px"
+					styleClass="myPanelCentrado">
+
+
+					<p:panel header="Datos del Artículo" styleClass="myPanelNormal">
+						<h:panelGrid id="datosArticulo" columns="3">
+							<h:outputText value="Código" />
+							<p:inputText id="codArt"
+								value="#{articulosBackingBean.articuloIngreso.idArticulo}" />
+							<p:spacer width="50" />
+
+							<h:outputText value="Título" />
+							<p:inputText id="tituloArt"
+								value="#{articulosBackingBean.articuloIngreso.tituloArticulo}"
+								size="65" maxlength="150" required="true"
+								requiredMessage="Debe ingresar título" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+
+							<h:outputText value="Convocatoria" />
+							<h:panelGroup>
+														
+								<p:selectOneMenu id="nomConvoc"
+									value="#{articulosBackingBean.articulo.convocatoria.idConv}"
+									required="true" requiredMessage="Debe ingresar la convocatoria" style="width:260px">
+									<f:selectItem itemLabel="Por favor seleccione" itemValue="" />
+									<f:selectItems value="#{articulosBackingBean.listaConv}"
+										var="convoc" itemLabel="#{convoc.nombreConvo}"
+										itemValue="#{convoc.idConv}" />									
+								</p:selectOneMenu>
+
+							</h:panelGroup>
+
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+
+						
+
+							<h:outputText value="Area de Investigación" />
+							<h:panelGroup>
+								<p:selectOneMenu id="areaInv"
+									value="#{articulosBackingBean.articulo.areaInvestigacion.idAreainv}"
+									required="true"
+									requiredMessage="Debe ingresar Area de Investigación" style="width:260px">
+									<f:selectItem itemLabel="Por favor seleccione" itemValue="" />
+									<f:selectItems value="#{articulosBackingBean.listaAreasInv}"
+										var="ai" itemLabel="#{ai.nombreArea}"
+										itemValue="#{ai.idAreainv}" />
+
+								</p:selectOneMenu>
+
+							</h:panelGroup>
+								<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+							
+
+							<h:outputText value="Resumen" />
+							<p:inputTextarea id="resumArt"
+								value="#{articulosBackingBean.articuloIngreso.breveResumen}"
+								rows="8" cols="45" />
+
+							<p:spacer width="50" />
+
+							<h:outputText value="Participación" />
+							<p:selectOneRadio id="part"
+								value="#{articulosBackingBean.articuloIngreso.participacionArticulo}">
+								<f:selectItem itemLabel="Autor" itemValue="1" />
+								<p:spacer width="50"/>
+								<f:selectItem itemLabel="Coautor" itemValue="2" />
+
+							</p:selectOneRadio>
+
+
+
+						</h:panelGrid>
+						
+						<p:spacer height="30"/>
+
+						<div align="center">
+							<h:panelGrid columns="1">
+								<h:panelGroup>
+									<p:commandLink id="guardarArticulo" process="formIngresoArticulo" actionListener="#{articulosBackingBean.guardarArticulos}"
+									update=":formIngresoArticulo:datosArticulo,msgs">
+										<p:graphicImage value="/images/GUARDARNuevo.png"
+											title="Guardar" width="35" height="35">
+										</p:graphicImage>
+									</p:commandLink>
+									<p:spacer width="20px" height="5px" />
+									<h:outputLink
+										value="${request.contextPath}/pages/registroArticulos.jsf">
+										<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+											width="35" height="35" />
+									</h:outputLink>
+									
+								</h:panelGroup>
+							</h:panelGrid>
+							<h:panelGrid  id="msgs" columns="1">
+								<p:message id="msgTitulo" for="tituloArt" />
+								<p:message id="msgConv" for="nomConvoc" />
+								<p:message id="msgAreaInv" for="areaInv" />
+								<p:message id="msgSaveArt" for="guardarArticulo"/>
+							</h:panelGrid>
+
+						</div>
+						<f:facet name="footer">
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+							<p:spacer width="5" height="5" />
+							<h:outputText value="Campos obligatorios" />
+						</f:facet>
+					</p:panel>
+				</p:panel>
+
+			</div>
+
+		</h:form>
+
+
+	</ui:define>
+
+</ui:composition>
+

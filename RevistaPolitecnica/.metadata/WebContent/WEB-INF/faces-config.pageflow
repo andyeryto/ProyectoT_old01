@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13608648181850" configfile="/ArticulosWeb/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="seguridad/seleccionRol.xhtml" x="122" y="178" id="pf13608682437191" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf13608682437192" path="/seguridad/seleccionRol.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="seguridad/principal.xhtml" x="338" y="370" id="pf13608682437193" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13608682437192 pf13608682437194" path="/seguridad/principal.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="seguridad/cambioClave.xhtml" x="122" y="562" id="pf13608682437195" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf13608682437194" path="/seguridad/cambioClave.xhtml"/>
+  <links id="pf13608682437192" target="pf13608682437193" source="pf13608682437191" outcome="principal"/>
+  <links id="pf13608682437194" target="pf13608682437193" source="pf13608682437195" outcome="principal"/>
+</pageflow:Pageflow>

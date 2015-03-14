@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<ui:composition template="/templates/common.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:v="http://validators.epn.edu.ec.com">
+      
+	<ui:define name="pageTitle">Registrar Apertura HCL</ui:define>
+	<ui:define name="body">
+	    
+		<h:form id="formRegistroAperturaHCL">
+				<div align="center">
+					<p:panel header="REGISTRAR APERTURA DE HCL" style="width:760px" >
+					
+					          <p:spacer width="25" height="25" /> 
+                            	
+                            	<h:panelGrid columns="4">
+                                 	<h:outputText value="Tipo de paciente: " />
+									 <p:selectOneMenu id="tipoPacient" >
+								        <f:selectItem itemLabel="Docente" itemValue="1" />
+										<f:selectItem itemLabel="Colaborador" itemValue="2" />
+										<f:selectItem itemLabel="Estudiante" itemValue="3" />
+										<f:selectItem itemLabel="Familiar Colaborador" itemValue="4" />
+										<f:selectItem itemLabel="Otro" itemValue="4" />
+		                            </p:selectOneMenu>
+		                             <p:spacer width="15"/> 
+		                            <p:commandLink  onclick="dlgPac.show()"  ajax="true">
+											   <p:graphicImage value="/images/buscar6.png" title="Consultar datos de identificación" />
+										  </p:commandLink>
+									 </h:panelGrid>
+									 
+							 <h:panelGrid columns="2">
+							     <h:outputText value="Cédula de Identidad:  "/>
+									<h:inputText id="CI"
+										value="" size="20"
+										required="true" />
+								
+								<h:outputText value="Número de HCL:  "  />
+							    <h:inputText id="numhcl"  
+									value="" size="25"
+									required="true"  />			
+										
+								<h:outputText value="Apellido 1:  "   />
+							    <h:inputText id="apellido1"
+									value="" size="25"
+									required="true" />
+								
+								<h:outputText value="Apellido 2:  "   />
+							    <h:inputText id="apellido2"
+									value="" size="25"
+									required="true" />
+								
+								<h:outputText value="Nombre 1:  " />
+							    <h:inputText id="nombre1"
+									value="" size="25"
+									required="true" />
+								
+								<h:outputText value="Nombre 2:  "  />
+							    <h:inputText id="nombre2"
+									value="" size="25"
+									required="true" />
+															
+							    				
+								<h:outputText value="Fecha de Nacimiento: " />
+								<h:panelGroup>
+									<p:calendar pattern="dd-MM-yyyy" locale="es"
+										mode="popup"
+										required="true" showOn="button" navigator="true" id="fechaNac"
+										showButtonPanel="true" 
+										requiredMessage="Debe seleccionar una fecha"></p:calendar>
+									<p:spacer width="5" height="5" />
+									</h:panelGroup>
+		
+								
+								<h:outputText value="Sexo:  "   />
+							     <p:selectOneMenu id="sex" >
+								        <f:selectItem itemLabel="Masculino" itemValue="1" />
+										<f:selectItem itemLabel="Femenido" itemValue="4" />
+                         		 </p:selectOneMenu>
+                         		 
+								<h:outputText value="Nacionalidad:  "  />
+							   <p:selectOneMenu id="nacionalid" >
+								        <f:selectItem itemLabel="Ecuatoriano" itemValue="1" />
+										<f:selectItem itemLabel="xxx" itemValue="4" />
+                         		 </p:selectOneMenu>
+							    
+								
+							    
+							
+							    <br />
+						</h:panelGrid>
+						<h:panelGrid columns="5">
+							 <center>
+								<h:panelGroup> 
+								  
+								  <p:commandLink id="Guardar"			>
+										<p:graphicImage value="/images/GUARDARNuevo.png" title="Guardar"
+										width="32" height="32"/>
+								  </p:commandLink>	
+								  <p:spacer width="25" height="15" />
+								  <p:commandLink id="Cancelar"			>
+										<p:graphicImage value="/images/atras.gif" title="Salir"
+										width="32" height="32"/>
+								  </p:commandLink>	
+							 </h:panelGroup>	
+							 </center>	
+						 </h:panelGrid>
+					</p:panel>
+		      </div>    
+		</h:form>
+	
+	<p:dialog id="dialogPaciente" widgetVar="dlgPac" modal="true">
+		<h:form id="formConsultaPaciente">
+			<div align="center">
+				<p:panel header="CONSULTAR PACIENTE" style="width:760px">
+					<h:panelGrid columns="2">
+						<h:outputText value="Tipo paciente" style="FONT-WEIGHT: bold;"/>
+							 <p:selectOneMenu id="tipoPac" >
+						        <f:selectItem itemLabel="Docente" itemValue="1" />
+								<f:selectItem itemLabel="Colaborador" itemValue="2" />
+								<f:selectItem itemLabel="Estudiante" itemValue="3" />
+								<f:selectItem itemLabel="Familiar Colaborador" itemValue="4" />
+								<f:selectItem itemLabel="Otro" itemValue="4" />
+                            </p:selectOneMenu>
+						<h:outputText value="Cédula de Identidad:  " style="FONT-WEIGHT: bold;" align="left" />
+						<h:inputText id="cedula"
+							value="" size="20"
+							required="true" />
+							
+						<h:outputText value="Apellidos:  " style="FONT-WEIGHT: bold;"/>
+					    <h:inputText id="apellido"
+							value="" size="20"
+							required="true" />
+						
+					 </h:panelGrid>
+					 <center>
+					 <h:panelGroup>	
+					  <p:commandLink id="Buscar"
+						    update="dgridPacientesEncontrados">
+							<p:graphicImage value="/images/buscar6.png" title="Buscar"
+							width="32" height="32"/>
+					  </p:commandLink>	
+					 </h:panelGroup>	
+					 </center>	
+				</p:panel>
+			
+		 </div>	
+	   
+	    <p:panel header="Pacientes Encontrados">
+							<p:dataTable id="dgridPacientesEncontrados" paginator="true"
+								rows="10"
+								paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								value="" var="art"
+								paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5,10"
+								emptyMessage="" paginatorPosition="bottom">
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="CI" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Apellidos" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Nombres" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								
+
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+                                       <p:commandLink
+											action="Seleccionar"  oncomplete="dlgPac.hide();"
+											ajax="false" disabled="">
+											<p:graphicImage value="/images/SELECCIONAR.ico"
+												title="AtenderPac" width="20"
+												height="20" />
+										</p:commandLink>
+                                </p:column>
+                   </p:dataTable>
+
+			  </p:panel>
+	    </h:form>
+	 </p:dialog>   
+	
+	
+	
+	
+	
+	</ui:define>
+</ui:composition>
+	

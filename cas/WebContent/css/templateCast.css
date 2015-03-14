@@ -1,0 +1,173 @@
+html{
+        min-height: 101%;
+}
+
+body{
+        font-family: Arial,Verdana,sans-serif !important;
+        font-size: 0.9em;
+        background-image: -moz-linear-gradient(top, #f0f0f0, #707070); /* FF3.6 */
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #707070), color-stop(1, #f0f0f0)); /* Safari 4+, Chrome 2+ */
+        background-image: -webkit-linear-gradient(top, #f0f0f0, #707070); /* Safari 5.1+, Chrome 10+ */
+        background-image: -o-linear-gradient(top, #f0f0f0, #707070); /* Opera 11.1+ */
+        background-image: -ms-linear-gradient(top, #f0f0f0, #707070); /* IE10+ */
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#707070'); /* IE6,IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#707070')"; /* IE8+ */
+        background-image: linear-gradient(top, #f0f0f0, #707070);
+}
+
+#idBodyCas{
+
+        margin: 1% auto 2% auto !important;
+        padding: 5px 5px !important;
+        -webkit-border-radius: 10px 11px 12px 13px;
+        -moz-border-radius: 10px 11px 12px 13px;
+        border-radius: 10px 11px 12px 13px;
+
+        border: 1px solid #ccc;
+        width:982px;
+        min-width:982px;
+        min-height: 600px;
+
+        background: #fff;
+
+        -webkit-box-shadow: #666 10px 10px 10px 3px;
+        -moz-box-shadow: #666 10px 10px 10px 3px; /* color, h-offset, v-offset, blur, spread */
+        box-shadow: #666 10px 10px 10px 3px; /* inset is optional */
+}
+
+
+#idBodyCas table.clsTablePrinCas{
+	height:99px;
+	background-repeat: no-repeat !important;
+	background-position: 30px 10px;
+}
+
+
+#idBodyCas table.clsTablePrinCas tr td img{
+	display: none !important;
+}
+
+#cas form{
+}
+
+form#fm1.clearfix:before,
+.clearfix{
+	clear: none !important;
+	width:90%;
+	min-width:90%;
+	margin: 6% auto !important;
+	padding:0 !important;
+	border:0px solid #000 !important;
+}
+
+#cas #sidebar{
+	display:block;
+	margin:0 !important;
+	padding: 0 1important;
+	word-wrap: break-word;
+	padding: 3% 4% 0 0;
+	width:60%;
+	min-width:50%;
+	float:right !important;
+}
+
+#sidebar p{
+	word-wrap: break-word;
+}
+
+#footer{
+	display:none;
+}
+
+#list-languages{
+	border: 0px solid #ddd;
+	width:90%;
+	padding: 0 0 3px 14px;
+	background:#EEEEEE;
+
+        -webkit-box-shadow: #999 2px 2px 4px 1px;
+        -moz-box-shadow: #999 2px 2px 4px 1px; /* color, h-offset, v-offset, blur, spread */
+        box-shadow: #aaa 4px 4px 8px 1px; /* inset is optional */
+
+        -webkit-border-radius: 10px 11px 12px 13px;
+        -moz-border-radius: 10px 11px 12px 13px;
+        border-radius: 10px 11px 12px 13px;
+}
+
+
+#list-languages ul li a:link{
+	font-family: Arial,Verdana,sans-serif !important;
+	font-size:0.9em !important;
+	color: #666;
+}
+
+#list-languages ul li.first a:link{
+	font-weight:bold
+}
+
+#list-languages ul {
+    display:block;
+    width:98% !important;
+    line-height: 1.5;
+    list-style: none outside none;
+    margin: 0 !important;
+    padding: 0 0 10px 35px !important;
+}
+
+#login{
+	float: left !important;
+	margin:0 0 0 3% !important;
+
+        -webkit-box-shadow: #999 2px 2px 4px 1px;
+        -moz-box-shadow: #999 2px 2px 4px 1px; /* color, h-offset, v-offset, blur, spread */
+        box-shadow: #aaa 4px 4px 8px 1px; /* inset is optional */
+
+        -webkit-border-radius: 10px 11px 12px 13px;
+        -moz-border-radius: 10px 11px 12px 13px;
+        border-radius: 10px 11px 12px 13px;
+
+}
+
+#cas #login:after{
+	background:none !important;
+}
+
+#login h2{
+	font-family: Arial,Verdana,sans-serif !important;
+	font-weight:bolder !important;
+}
+
+#login div label{
+	font-family: Arial,Verdana,sans-serif !important;
+	font-size:1em !important;
+	font-weight:bold !important;
+}
+
+#login .check label{
+	font-weight:normal !important;
+}
+
+#login .btn-row{
+	text-align:right !important;
+}
+
+#login input{
+	font-size:0.9em;
+
+        -webkit-box-shadow: #999 2px 2px 4px 1px;
+        -moz-box-shadow: #999 2px 2px 4px 1px; /* color, h-offset, v-offset, blur, spread */
+        box-shadow: #aaa 4px 4px 8px 1px; /* inset is optional */
+
+	margin:8px 0 0 0;
+	font-size:0.8em !important;
+
+}
+
+.btn-submit{
+	background:#666;
+	color:#fff;
+}
+
+.btn-reset{
+	color:#444 !important;
+}

@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/templates/common.xhtml">
+	<ui:define name="pageTitle">REGISTRO DE ARTICULOS</ui:define>
+	<ui:define name="body">
+
+		<center style="display: block; text-align: -webkit-center;">
+			<h:form>
+				<h:panelGroup>
+
+					<p:spacer width="5" height="5"></p:spacer>
+					<p:commandLink onclick="nuevoArticuloD.show();"
+						update=":formNuevoArticulo">
+						<p:graphicImage value="/images/NUEVO3.png" title="Nuevo Artículo"></p:graphicImage>
+					</p:commandLink>
+					<br />
+					<br />
+				</h:panelGroup>
+			</h:form>
+		</center>
+
+
+		<h:form id="formRegistroArticulos">
+			<div align="center">
+				<p:panel header="REGISTRO DE ARTICULOS" style="width:760px">
+					<div align="center">
+
+						<p:panel header="Datos del Articulista">
+
+							<p:dataGrid id="dgridDocente"
+								value="#{docenteBackingBean.docente}" var="doc" columns="1">
+								<div align="center">
+									<h:outputText value="Nombre: "
+										style="FONT-WEIGHT: bold; text-align:left" />
+									<h:outputText value="#{doc.nom} #{doc.apel}" />
+								</div>
+							</p:dataGrid>
+
+						</p:panel>
+
+						<p:panel header="Artículos Registrados">
+							<p:dataTable id="dgridArticulosDocente" paginator="true"
+								rows="10"
+								paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								value="#{articulosBackingBean.articulos}" var="art"
+								paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5,10"
+								emptyMessage="" paginatorPosition="bottom">
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Código" />
+									</f:facet>
+									<h:outputText value="#{art.auxAutogenerado}" />
+								</p:column>
+								<p:column width="320">
+									<f:facet name="header">
+										<h:outputText value="Nombre" />
+									</f:facet>
+									<h:outputText value="#{art.tituloArticulo}" />
+								</p:column>
+
+								<p:column width="60">
+									<f:facet name="header">
+										<h:outputText value="Fecha" />
+									</f:facet>
+									<h:outputText value="#{art.fechaEnvio}">
+										<f:convertDateTime pattern="yyyy-MM-dd" />
+									</h:outputText>
+								</p:column>
+
+								<p:column width="60">
+									<f:facet name="header">
+										<h:outputText value="Estado" />
+									</f:facet>
+									<h:outputText value="#{art.estadoA.nombreE}" />
+								</p:column>
+
+
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+
+									<p:commandLink
+										action="registroDocumentoArticulo"
+										ajax="false" disabled="#{(art.estadoA.nombreE == 'APROBADO') or (art.estadoA.nombreE == 'RECHAZADO')}">
+										<p:graphicImage value="/images/upload.png"
+											title="Registrar o actualizar Documento" width="20"
+											height="20" />
+										<f:setPropertyActionListener
+											target="#{articulosBackingBean.articuloInfo}"
+											value="#{art}"></f:setPropertyActionListener>
+									</p:commandLink>
+									<p:spacer height="5px" width="10px" />
+									
+
+									<p:commandLink oncomplete="editarArticuloD.show();"
+										update=":formEditarArticulo"
+										process="@this,dgridArticulosDocente" disabled="#{(art.estadoA.nombreE == 'APROBADO') or (art.estadoA.nombreE == 'RECHAZADO')}">
+										<p:graphicImage value="/images/EDITAR2.png" title="Editar"
+											style="border:0px solid #CAD6E0;" height="20" width="20">
+										</p:graphicImage>
+										<f:setPropertyActionListener
+											target="#{articulosBackingBean.articuloEdit}" value="#{art}"></f:setPropertyActionListener>
+
+									</p:commandLink>
+									<p:spacer height="5px" width="10px" />
+									<p:commandLink oncomplete="cd.show()"
+								process="@this,dgridArticulosDocente" disabled="#{(art.estadoA.nombreE == 'APROBADO') or (art.estadoA.nombreE == 'RECHAZADO')}">
+								<p:graphicImage value="/images/eliminar24.ico" title="Eliminar"
+									style="border:0px solid #CAD6E0;" height="20" width="20"></p:graphicImage>
+								<f:setPropertyActionListener
+									target="#{articulosBackingBean.articuloEdit}" value="#{art}">
+								</f:setPropertyActionListener>
+							</p:commandLink>
+
+								</p:column>
+
+
+							</p:dataTable>
+
+						</p:panel>
+					</div>
+				</p:panel>
+
+			</div>
+
+
+		</h:form>
+
+
+		<p:dialog id="nuevoArticulo" widgetVar="nuevoArticuloD"
+			header="Nuevo Artículo" hideEffect="fade" modal="true"
+			resizable="false">
+			<h:form id="formNuevoArticulo">
+				<fieldset style="border-color: #66CCFF; border-style: solid;">
+					<h:panelGrid columns="2">
+						<h:outputText value="Título" />
+						<h:panelGroup>
+							<p:inputText id="titArt"
+								value="#{articulosBackingBean.articuloIngreso.tituloArticulo}"
+								maxlength="150" size="80" required="true"
+								requiredMessage="Debe ingresar el título del artículo" />
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+						<h:outputText value="Convocatoria" />
+						<h:panelGroup>
+
+							<p:selectOneMenu id="nomConvArt"
+								value="#{articulosBackingBean.nuevaConvocatoria.idConv}"
+								style="width:160px">
+								<f:selectItem itemLabel="Por favor seleccione" itemValue="" />
+								<f:selectItems value="#{articulosBackingBean.listaConv}"
+									var="convocat" itemLabel="#{convocat.nombreConvo}"
+									itemValue="#{convocat.idConv}" />
+							</p:selectOneMenu>
+
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+
+						<h:outputText value="Area de Investigación" />
+						<h:panelGroup>
+							<p:selectOneMenu id="areaInvArt"
+								value="#{articulosBackingBean.nuevaAreaInv.idAreainv}"
+								style="width:160px">
+								<f:selectItem itemLabel="Por favor seleccione" itemValue="" />
+								<f:selectItems value="#{articulosBackingBean.listaAreasInv}"
+									var="areaInv" itemLabel="#{areaInv.nombreArea}"
+									itemValue="#{areaInv.idAreainv}" />
+							</p:selectOneMenu>
+
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+
+						<h:outputText value="Participación" />
+						<h:panelGroup>
+							<p:selectOneRadio id="participArt"
+								value="#{articulosBackingBean.articuloIngreso.participacionArticulo}">
+								<f:selectItem itemLabel="AUTOR" itemValue="AUTOR" />
+								<f:selectItem itemLabel="COAUTOR" itemValue="COAUTOR" />
+							</p:selectOneRadio>
+
+						</h:panelGroup>
+
+						<h:outputText value="Palabras clave" />
+						<h:panelGroup>
+							<p:inputTextarea id="palabClaveArt"
+								value="#{articulosBackingBean.articuloIngreso.palabrasClave}"
+								rows="8" cols="15" maxlength="50" />
+
+							<p:spacer width="5" height="5" />
+
+						</h:panelGroup>
+
+
+						<h:outputText value="Breve resumen" />
+						<h:panelGroup>
+							<p:inputTextarea id="resumArt"
+								value="#{articulosBackingBean.articuloIngreso.breveResumen}"
+								maxlength="200" rows="8" cols="45" />
+							<p:spacer width="5" height="5" />
+
+						</h:panelGroup>
+						
+						
+
+					</h:panelGrid>
+				</fieldset>
+				<center>
+					<h:panelGrid columns="1">
+						<h:panelGroup>
+							<p:commandLink id="saveArticulo"
+								actionListener="#{articulosBackingBean.guardarArticulos}"
+								process="titArt,nomConvArt,areaInvArt,nomConvArt,resumArt,participArt,palabClaveArt,:formNuevoArticulo"
+								update="msgSave,msgTituloArt,:formNuevoArticulo,:formRegistroArticulos">
+								<p:graphicImage value="/images/GUARDARNuevo.png" title="Guardar"
+									width="32" height="32" />
+							</p:commandLink>
+							<p:spacer width="5" height="5"></p:spacer>
+							<p:commandLink oncomplete="nuevoArticuloD.hide();">
+								<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+									width="36" height="35" />
+							</p:commandLink>
+						</h:panelGroup>
+					</h:panelGrid>
+					<h:panelGrid columns="1">
+						<p:message id="msgSave" for="saveArticulo" />
+						<p:message id="msgTituloArt" for="titArt" />
+
+					</h:panelGrid>
+
+				</center>
+
+
+			</h:form>
+
+			<f:facet name="footer">
+				<p:graphicImage value="/images/asterisk-icon.png" width="10"
+					height="10" />
+				<p:spacer width="5" height="5" />
+				<h:outputText value="Campos obligatorios" />
+			</f:facet>
+		</p:dialog>
+
+
+
+
+
+		<p:dialog id="editarArticulo" widgetVar="editarArticuloD"
+			header="Editar Articulo" hideEffect="fade" modal="true"
+			resizable="false" showEffect="explode">
+			<h:form id="formEditarArticulo">
+				<fieldset style="border-color: #66CCFF; border-style: solid;">
+					<h:panelGrid columns="2">
+						<h:outputText value="Código" />
+						<h:inputText id="codArtUp"
+							value="#{articulosBackingBean.articuloEdit.auxAutogenerado}" size="13"
+							required="true" readonly="true" />
+						<h:outputText value="Título" />
+						<h:panelGroup>
+							<h:inputText id="titArtUp"
+								value="#{articulosBackingBean.articuloEdit.tituloArticulo}"
+								maxlength="150" size="80" required="true"
+								requiredMessage="Debe ingresar el título del artículo" />
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+						<h:outputText value="Convocatoria" />
+						<h:panelGroup>
+							<p:selectOneMenu id="convArtUp"
+								value="#{articulosBackingBean.articuloEdit.convocatoria}">
+								<f:selectItems value="#{articulosBackingBean.listaConv}"
+									var="convoc" itemLabel="#{convoc.nombreConvo}"
+									itemValue="#{convoc}" />
+							</p:selectOneMenu>
+						</h:panelGroup>
+						<h:outputText value="Area de Investigación" />
+						<h:panelGroup>
+							<p:selectOneMenu id="areaInvArtUp"
+								value="#{articulosBackingBean.articuloEdit.areaInvestigacion}">
+								<f:selectItems value="#{articulosBackingBean.listaAreasInv}"
+									var="areaInv" itemLabel="#{areaInv.nombreArea}"
+									itemValue="#{areaInv}" />
+							</p:selectOneMenu>
+						</h:panelGroup>
+
+						<h:outputText value="Participación" />
+						<h:panelGroup>
+							<p:selectOneRadio id="participArtUp"
+								value="#{articulosBackingBean.articuloEdit.participacionArticulo}">
+								<f:selectItem itemLabel="AUTOR" itemValue="AUTOR" />
+								<f:selectItem itemLabel="COAUTOR" itemValue="COAUTOR" />
+							</p:selectOneRadio>
+
+						</h:panelGroup>
+
+						<h:outputText value="Palabras clave" />
+						<h:panelGroup>
+							<p:inputTextarea id="palabClaveArtUp"
+								value="#{articulosBackingBean.articuloEdit.palabrasClave}"
+								rows="8" cols="15" maxlength="50" />
+
+							<p:spacer width="5" height="5" />
+
+						</h:panelGroup>
+
+
+						<h:outputText value="Breve resumen" />
+						<h:panelGroup>
+							<p:inputTextarea id="resumArtUp"
+								value="#{articulosBackingBean.articuloEdit.breveResumen}"
+								maxlength="200" rows="8" cols="45" />
+							<p:spacer width="5" height="5" />
+
+						</h:panelGroup>
+
+
+					</h:panelGrid>
+
+				</fieldset>
+				<center>
+					<h:panelGrid columns="1">
+						<h:panelGroup>
+							<p:commandLink id="updateArticulo"
+								actionListener="#{articulosBackingBean.actualizarArticulo}"
+								process="formEditarArticulo"
+								update=":formRegistroArticulos,msgSaveUp,msgTitArtUp,:formEditarArticulo">
+								<p:graphicImage value="/images/GUARDARNuevo.png" title="Guardar"
+									width="32" height="32" />
+							</p:commandLink>
+							<p:spacer width="20px" height="5px" />
+							<p:commandLink oncomplete="editarArticuloD.hide();">
+								<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+									width="36" height="35" />
+							</p:commandLink>
+						</h:panelGroup>
+					</h:panelGrid>
+					<h:panelGrid columns="1">
+						<p:message id="msgSaveUp" for="updateArticulo" />
+						<p:message id="msgTitArtUp" for="titArtUp" />
+					</h:panelGrid>
+				</center>
+			</h:form>
+			<center>
+				<f:facet name="footer">
+					<p:graphicImage value="/images/asterisk-icon.png" width="10"
+						height="10" />
+					<p:spacer width="5" height="5" />
+					<h:outputText value="Campos obligatorios" />
+				</f:facet>
+			</center>
+		</p:dialog>
+		
+		<h:form id="deleteConfirm">
+			<p:confirmDialog
+				message="¿Está seguro(a) que desea eliminar el artículo?"
+				header="Eliminación de artículo" severity="alert" widgetVar="cd">
+				<center>
+					<p:commandButton value="Aceptar"
+						actionListener="#{articulosBackingBean.eliminarArticulo}" update=":formRegistroArticulos"
+						oncomplete="cd.hide()" />
+					<p:commandButton value="Cancelar" onclick="cd.hide();"
+						type="button" />
+				</center>
+			</p:confirmDialog>
+		</h:form>
+
+
+
+	</ui:define>
+</ui:composition>
+</html>

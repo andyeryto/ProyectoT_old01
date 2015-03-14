@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/common.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:v="http://validators.epn.edu.ec.com">
+
+	<ui:define name="pageTitle">AsignarRevisor</ui:define>
+	<ui:define name="body">
+
+		<center>
+			<h:form id="buscarArticulos">
+				<p:panel header="Buscar Artículos" style="width:610px;">
+					<h:panelGrid columns="4">
+						<h:outputText value="Código" />
+						<p:inputText value="#{articulos.idArticulo}" id="idArt" />
+						<h:outputText value="Texto Resúmen" />
+						<p:inputText value="#{articulos.palabrasclave}" id="idTxt" />
+						<h:outputText value="Título" />
+						<p:inputText value="#{articulos.titulo}" id="idTitul" />
+						<h:outputText value="" />
+						<h:outputText value="" />
+
+
+						<h:outputText value="Fecha Presentación:  " />
+						<h:outputText value="" />
+						<h:outputText value="" />
+						<h:outputText value="" />
+
+						<h:outputText value="Desde : " />
+						<h:panelGroup>
+							<p:calendar pattern="dd-MM-yyyy" locale="es"
+								value="#{articulos.fechadesde}" mode="popup" required="true"
+								showOn="button" navigator="true" id="fechainicio"
+								showButtonPanel="true"
+								requiredMessage="Debe seleccionar una fecha"></p:calendar>
+
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+
+						<h:outputText value="Hasta : " />
+						<h:panelGroup>
+							<p:calendar pattern="dd-MM-yyyy" locale="es"
+								value="#{articulos.fechaHasta}" mode="popup" required="true"
+								showOn="button" navigator="true" id="fechafin"
+								showButtonPanel="true"
+								requiredMessage="Debe seleccionar una fecha"></p:calendar>
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+						<h:outputText value="Estado : " />
+						<h:panelGroup>
+							<p:selectOneMenu id="estadoArticulo"
+								value="#{articulos.idEstado}" required="true"
+								requiredMessage="Debe seleccionar un Área de Investigación">
+								<f:selectItem itemLabel="Por Favor Seleccione" itemValue="" />
+								<f:selectItems value="#{estados.listaEstado}" var="estado"
+									itemLabel="#{estado.nombreE}" itemValue="#{estado.idEstadoa}" />
+							</p:selectOneMenu>
+							<p:spacer width="5" height="5" />
+							<p:graphicImage value="/images/asterisk-icon.png" width="10"
+								height="10" />
+						</h:panelGroup>
+					</h:panelGrid>
+
+					<p:commandLink id="BuscarArt"
+						action="#{articulos.buscarArticulosParametros()}"
+						update=":listaArticulos,idArt,idTxt,idTitul,fechainicio,fechafin,estadoArticulo,msgBuscae,msgFechainicio,msgFechainicio,buscarArticulos,ksgAreaInvs"
+						process="@this,idArt,idTxt,idTitul,fechainicio,fechafin,estadoArticulo">
+						<p:graphicImage value="/images/buscar6.png" title="Buscar"
+							style="border:0px solid #CAD6E0;" />
+					</p:commandLink>
+					<h:panelGrid columns="1">
+						<p:message id="msgBuscae" for="BuscarArt" />
+						<p:message id="msgFechainicio" for="fechainicio" />
+						<p:message id="msgFechaFin" for="fechafin" />
+						<p:message id="ksgAreaInvs" for="estadoArticulo"></p:message>
+					</h:panelGrid>
+					<f:facet name="footer">
+						<p:graphicImage value="/images/asterisk-icon.png" width="10"
+							height="10" />
+						<p:spacer width="5" height="5" />
+						<h:outputText value="Campos obligatorios" />
+					</f:facet>
+				</p:panel>
+
+			</h:form>
+
+		</center>
+
+
+		<center>
+			<h:form id="listaArticulos">
+				<p:panel header=" Lista de Artículos " styleClass="myPanelCentrado">
+					<p:dataTable id="articulosDataTable" paginator="true"
+						nemptyMessage="Para ver las artículos existentes presione en Buscar"
+						rows="10" rowsPerPageTemplate="3,6,10" var="articulo"
+						value="#{articulos.listaArticulosParametros}"
+						paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
+
+						<p:column width="80">
+							<f:facet name="header">
+								<h:outputText value="Código" />
+							</f:facet>
+							<h:outputText id="artCod" value="#{articulo.auxAutogenerado}" />
+						</p:column>
+
+						<p:column width="150">
+							<f:facet name="header">
+								<h:outputText value="Título" />
+							</f:facet>
+							<h:outputText id="artTitulo" value="#{articulo.tituloArticulo}" />
+						</p:column>
+						<p:column width="100">
+							<f:facet name="header">
+								<h:outputText value="Fecha Presentación" />
+							</f:facet>
+							<h:outputText id="artFecha" value="#{articulo.fechaEnvio}" />
+						</p:column>
+						
+						<p:column width="140">
+							<f:facet name="header">
+								<h:outputText value="Presentado por: " />
+							</f:facet>
+							<h:outputText id="nomPresent" value="#{articulo.emp_1.nom} #{articulo.emp_1.apel}" />
+
+						</p:column>
+
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Acciones" />
+							</f:facet>
+
+							<p:commandLink action="#{articulos.buscarRevisorArticulos}"
+								oncomplete="asignarRevisorD.show();"
+								update=":listRevisores,:listaArticulos,:revisores"
+								process="@this,articulosDataTable,artCod"
+								disabled="#{(articulo.estadoA.nombreE=='APROBADO') or (articulo.estadoA.nombreE=='RECHAZADO')}">
+
+								<p:graphicImage value="/images/loggin.jpg"
+									title="Asignar Revisor" style="border:0px solid #CAD6E0;"
+									height="20" width="20">
+								</p:graphicImage>
+
+								<f:setPropertyActionListener target="#{articulos.aticuloinfo}"
+									value="#{articulo}"></f:setPropertyActionListener>
+
+							</p:commandLink>
+
+							<p:spacer height="5px" width="10px" />
+
+							<p:commandLink oncomplete="infoArticuloD.show();" action=""
+								update=":listaArticulos, :infoArticulo"
+								process="@this,articulosDataTable">
+								<p:graphicImage value="/images/SELECCIONAR.ico"
+									title="Seleccionar" style="border:0px solid #CAD6E0;"
+									height="20" width="20">
+								</p:graphicImage>
+								<f:setPropertyActionListener target="#{articulos.aticuloinfo}"
+									value="#{articulo}"></f:setPropertyActionListener>
+
+							</p:commandLink>
+
+							<p:spacer height="5px" width="10px" />
+							<p:commandLink action="#{articulos.buscarRevisorArticulos}"
+								oncomplete="consultarRevisorD.show();"
+								update=":listRevisoresAsig,:listaArticulos,:revisoresAsig"
+								process="@this,articulosDataTable,artCod">
+
+								<p:graphicImage value="/images/revisores.jpg"
+									title="Consultar Revisores" style="border:0px solid #CAD6E0;"
+									height="20" width="20">
+								</p:graphicImage>
+
+								<f:setPropertyActionListener target="#{articulos.aticuloinfo}"
+									value="#{articulo}"></f:setPropertyActionListener>
+
+							</p:commandLink>
+							
+						
+
+						</p:column>
+					</p:dataTable>
+
+				</p:panel>
+
+			</h:form>
+
+		</center>
+
+
+
+		<p:dialog id="infoArticulo" widgetVar="infoArticuloD"
+			header="Información del Artículo" hideEffect="fade" modal="true"
+			resizable="false" showEffect="explode">
+			<h:form id="formInfoArticulo">
+				<fieldset style="border-color: #66CCFF; border-style: solid;">
+
+					<h:panelGrid columns="2">
+
+
+						<h:outputText value="Código" />
+						<p:inputText id="codCa" maxlength="25" size="50" readonly="true"
+							value="#{articulos.aticuloinfo.auxAutogenerado}" />
+
+						<h:outputText value="Título" />
+						<p:inputText value="#{articulos.aticuloinfo.tituloArticulo}"
+							maxlength="50" size="90" readonly="true" />
+
+
+						<h:outputText value="Convocatoria " />
+						<p:inputText
+							value="#{articulos.aticuloinfo.convocatoria.nombreConvo}"
+							readonly="true" size="30"></p:inputText>
+
+
+						<h:outputText value="Estado " />
+						<p:inputText value="#{articulos.aticuloinfo.estadoA.nombreE}"
+							readonly="true"></p:inputText>
+
+						<h:outputText value="Fecha Envío" />
+						<p:inputText value="#{articulos.aticuloinfo.fechaEnvio}"
+							readonly="true">
+							<f:convertDateTime pattern="dd-MM-yyyy" />
+						</p:inputText>
+
+						<h:outputText value="Participación" />
+						<p:inputText
+							value="#{articulos.aticuloinfo.participacionArticulo}"
+							maxlength="50" size="90" readonly="true" />
+
+
+						<h:outputText value="Palabras clave" />
+						<p:inputTextarea value="#{articulos.aticuloinfo.palabrasClave}"
+							maxlength="250" rows="3" cols="20" readonly="true" />
+
+
+						<h:outputText value="Breve Resúmen" />
+						<p:inputTextarea value="#{articulos.aticuloinfo.breveResumen}"
+							maxlength="500" rows="4" cols="75" readonly="true" />
+
+					</h:panelGrid>
+				</fieldset>
+
+				<center>
+					<h:panelGrid columns="1">
+						<h:panelGroup>
+							<p:commandLink oncomplete="infoArticuloD.hide();"
+								update="@this,:listaArticulos">
+								<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+									width="36" height="35" />
+							</p:commandLink>
+						</h:panelGroup>
+					</h:panelGrid>
+
+
+				</center>
+
+			</h:form>
+		</p:dialog>
+
+
+
+		<p:dialog id="revisores" widgetVar="asignarRevisorD" header="Artículo"
+			hideEffect="fade" modal="true" resizable="false" showEffect="explode">
+
+
+			<h:form id="listRevisores">
+
+				<p:panel id="InformacionArticuloss" style="width:800px;">
+
+
+					<center>
+						<h:outputText id="tituloArt1"
+							value="#{articulos.aticuloinfo.tituloArticulo}"
+							style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 15px; " />
+						<br />
+						<center>
+							<h:outputText value="AUTOR" />
+						</center>
+						<h:panelGroup>
+
+							<h:outputText id="presentado"
+								value="#{articulos.aticuloinfo.emp_1.nom}"
+								style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " />
+							<p:spacer height="5px" width="10px" />
+							<h:outputText id="apellido"
+								value="#{articulos.aticuloinfo.emp_1.apel}"
+								style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " />
+						</h:panelGroup>
+
+
+
+					</center>
+				</p:panel>
+
+
+				<center style="display: block; text-align: -webkit-center;">
+					<h:panelGroup>
+						<p:commandLink onclick="buscarRevisorD.show();"
+							update=":formBuscarRevisor"
+							disabled="#{articulos.listarevisores.size() >= 3 }">
+							<p:graphicImage value="/images/AGREGAR.png"
+								title="Agregar Revisor" width="45" height="45">
+								<br />
+							</p:graphicImage>
+						</p:commandLink>
+
+					</h:panelGroup>
+				</center>
+
+				<center>
+					<p:panel header=" Lista de Revisores " styleClass="myPanelCentrado">
+						<p:dataTable id="revisoresDataTable" rows="10" var="revisores"
+							emptyMessage="No existen revisores asignados para este artículo"
+							value="#{articulos.listarevisores}">
+
+							<p:column width="250">
+								<f:facet name="header">
+									<h:outputText value="Nombre del Revisor" />
+								</f:facet>
+								<h:outputText id="nombreRev"
+									value="#{revisores.revisor.nombres}" />
+								<p:spacer width="5px" height="10px"></p:spacer>
+								<h:outputText id="apelRev"
+									value="#{revisores.revisor.apellidos}" />
+							</p:column>
+
+							<p:column width="150">
+								<f:facet name="header">
+									<h:outputText value="Fecha Asignación" />
+								</f:facet>
+								<h:outputText id="fechaAsigRev"
+									value="#{revisores.fechaAsignacion}">
+									<f:convertDateTime pattern="dd-MM-yyyy" />
+								</h:outputText>
+							</p:column>
+							<p:column width="150">
+								<f:facet name="header">
+									<h:outputText value="Fecha Máxima Revisión" />
+								</f:facet>
+								<h:outputText id="fechaMaxRev" value="#{revisores.fechamaxrev}">
+									<f:convertDateTime pattern="dd-MM-yyyy" />
+								</h:outputText>
+							</p:column>
+
+							<p:column width="100">
+								<f:facet name="header">
+									<h:outputText value="Email" />
+								</f:facet>
+								<h:outputText id="emailRev" value="#{revisores.revisor.email}" />
+							</p:column>
+
+						</p:dataTable>
+
+					</p:panel>
+
+					<center>
+						<h:panelGrid columns="1">
+							<h:panelGroup>
+
+								<p:spacer width="5" height="5"></p:spacer>
+								<p:commandLink oncomplete="asignarRevisorD.hide(); "
+									update="@this">
+									<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+										width="36" height="35" />
+								</p:commandLink>
+							</h:panelGroup>
+						</h:panelGrid>
+
+					</center>
+
+				</center>
+
+
+
+			</h:form>
+
+
+		</p:dialog>
+
+
+
+
+
+		<p:dialog id="buscarRevisor" widgetVar="buscarRevisorD"
+			header="Buscar Revisor" hideEffect="fade" modal="true"
+			resizable="false" showEffect="explode">
+			<h:form id="formBuscarRevisor">
+				<fieldset style="border-color: #66CCFF; border-style: solid;">
+
+					<h:panelGrid columns="2">
+
+
+						<h:outputText value="IDENTFICACION : " />
+						<p:inputText id="codIdent" maxlength="25" size="25"
+							value="#{articulos.cedulaRevisor}"
+							title="Identificación del revisor" />
+
+
+						<h:outputText value="APELLIDOS : " />
+						<p:inputText id="Apellidos" maxlength="60" size="60"
+							value="#{articulos.apellidosRevisor}">
+							<f:converter converterId="converterUpper" for="Apellidos"></f:converter>
+						</p:inputText>
+
+						<h:outputText value="NOMBRES : " />
+						<p:inputText id="idombres" maxlength="60" size="60"
+							value="#{articulos.nombresRevisor}">
+							<f:converter converterId="converterUpper" for="idombres">
+							</f:converter>
+						</p:inputText>
+
+
+					</h:panelGrid>
+				</fieldset>
+
+				<center>
+					<h:panelGrid columns="1">
+						<h:panelGroup>
+							<p:commandLink id="buscarRevisor"
+								action="#{articulos.buscarRevisoresParametros}"
+								oncomplete="selecRevisorD.show();"
+								update=":seleccionarrevisor,:formSeleccionarRevisor,:formConfirmar"
+								proces="codIdent,Apellidos,idombres">
+								<p:graphicImage value="/images/buscar6.png" title="Buscar"
+									width="32" height="32" />
+							</p:commandLink>
+							<p:spacer width="5" height="5"></p:spacer>
+							<p:commandLink oncomplete="buscarRevisorD.hide(); "
+								update="@this">
+								<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+									width="36" height="35" />
+							</p:commandLink>
+						</h:panelGroup>
+					</h:panelGrid>
+
+				</center>
+
+			</h:form>
+
+		</p:dialog>
+
+
+		<center>
+			<p:dialog id="seleccionarrevisor" widgetVar="selecRevisorD"
+				header="Seleccionar Revisor" hideEffect="fade" modal="true"
+				resizable="false" showEffect="explode">
+				<h:form id="formSeleccionarRevisor">
+					<fieldset style="border-color: #66CCFF; border-style: solid;">
+
+						<p:panel header=" Revisor " styleClass="myPanelCentrado">
+							<p:dataTable id="revisorDataTable" paginator="true"
+								paginatorPosition="bottom" rows="10"
+								rowsPerPageTemplate="3,6,10" var="revasig"
+								paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								value="#{articulos.listaRevisor}">
+
+								<p:column width="200">
+									<f:facet name="header">
+										<h:outputText value="Apellidos" />
+									</f:facet>
+									<h:outputText id="apellidRevisor" value="#{revasig.apellidos}" />
+								</p:column>
+
+								<p:column width="200">
+									<f:facet name="header">
+										<h:outputText value="Nombre" />
+									</f:facet>
+									<h:outputText id="nomdRevisor" value="#{revasig.nombres}" />
+								</p:column>
+
+								<p:column width="100">
+									<f:facet name="header">
+										<h:outputText value="Cédula" />
+									</f:facet>
+									<h:outputText id="cedulaRevisor"
+										value="#{revasig.nidentificacion}" />
+								</p:column>
+
+
+								<p:column width="150">
+									<f:facet name="header">
+										<h:outputText value="Email" />
+									</f:facet>
+									<h:outputText id="emailRevisor" value="#{revasig.email}" />
+								</p:column>
+
+								<p:column width="100">
+									<f:facet name="header">
+										<h:outputText value="Tipo Revisor" />
+									</f:facet>
+									<h:outputText id="topoRevisor"
+										value="#{revasig.tipoRev.nombreTrev}" />
+								</p:column>
+								<p:column>
+
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+
+									<p:commandLink
+										oncomplete="document.getElementById('confirmar').style.visibility = 'visible'"
+										update=":formConfirmar">
+										<p:graphicImage value="/images/SELECCIONAR.ico"
+											title="Seleccionar" style="border:0px solid #CAD6E0;"
+											height="20" width="20">
+										</p:graphicImage>
+
+										<f:setPropertyActionListener target="#{articulos.revisorInfo}"
+											value="#{revasig}"></f:setPropertyActionListener>
+									</p:commandLink>
+								</p:column>
+							</p:dataTable>
+						</p:panel>
+
+
+
+					</fieldset>
+				</h:form>
+				
+				
+				<h:form id="formConfirmar">
+					<center>
+						<h:outputText value="FECHA MÁXIMA DE REVISIÓN : " />
+
+						<p:calendar pattern="dd-MM-yyyy" locale="es"
+							mindate="calwidget.today()" widgetVar="calwidget"
+							value="#{articulos.fechaMAxRev}" mode="popup" showOn="button"
+							navigator="true" id="fechaREV" required="true"
+							showButtonPanel="true" requiredMessage="Seleccione una fecha"></p:calendar>
+					</center>
+
+
+
+					<div align="center" id="confirmar" style="visibility: hidden">
+
+						<h:panelGroup>
+							<h:graphicImage value="/images/alerta2.gif"
+								style="border:0px solid #CAD6E0;" />
+
+
+							<h:outputText
+								value="Está seguro que desea asignar el siguiente revisor para el artículo,  "
+								style="FONT-FAMILY: arial; FONT-SIZE: 14px; COLOR: #ff0001 " />
+							<br />
+							<h:outputText id="titlarrtrev"
+								value="#{articulos.aticuloinfo.tituloArticulo}"
+								style="FONT-FAMILY: arial; FONT-SIZE: 14px" />
+						</h:panelGroup>
+
+						<br />
+						<h:outputText value="Verifique los datos,  "
+							style="FONT-FAMILY: arial; FONT-SIZE: 14px; COLOR: #ff0001 " />
+
+						<h:panelGrid style="border:1px solid #CAD6E0;" columns="2"
+							id="PanelGrid4">
+
+							<h:outputText value="Nombre:  " style="FONT-WEIGHT: bold;" />
+							<h:outputText id="nomProf1"
+								value="#{articulos.revisorInfo.nombres}" /> 
+
+
+							<h:outputText value="Apellidos : " style="FONT-WEIGHT: bold;" />
+							<h:outputText id="apeRev2"
+								lang="de" value="#{articulos.revisorInfo.apellidos}" />
+
+
+
+							<h:outputText value="CI: " style="FONT-WEIGHT: bold;" />
+							<h:outputText id="ciCli3"
+								value="#{articulos.revisorInfo.nidentificacion}" />
+
+						</h:panelGrid>
+
+						<center>
+							<h:panelGrid columns="1">
+								<h:panelGroup>
+									<p:commandLink id="guardarRevisor"
+										actionListener="#{articulos.guardarRevisor}"
+										update="msgSave,:listRevisores,msgFechaRev"
+										process="@this,fechaREV">
+										<p:graphicImage value="/images/GUARDARNuevo.png"
+											title="Guardar" width="32" height="32" />
+									</p:commandLink>
+
+
+									<p:spacer width="5" height="5"></p:spacer>
+									<p:commandLink oncomplete="selecRevisorD.hide(); "
+										onclick="buscarRevisorD.hide();" update="@this">
+										<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+											width="36" height="35" />
+									</p:commandLink>
+								</h:panelGroup>
+							</h:panelGrid>
+
+							<h:panelGrid columns="1">
+								<p:message id="msgSave" for="guardarRevisor" />
+								<p:message id="msgFechaRev" for="fechaREV" />
+
+							</h:panelGrid>
+
+						</center>
+					</div>
+
+				</h:form>
+			</p:dialog>
+
+		</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<center>
+
+			<p:dialog id="revisoresAsig" widgetVar="consultarRevisorD"
+				header="Detalle del Artículo" hideEffect="fade" modal="true"
+				resizable="false" showEffect="explode">
+
+				<h:form id="listRevisoresAsig">
+
+					<p:panel id="InformacionArticulossRevisor" style="width:800px;">
+
+
+						<center>
+							<h:outputText id="tituloArt1rEV"
+								value="#{articulos.aticuloinfo.tituloArticulo}"
+								style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 15px; " />
+							<br />
+							<center>
+								<h:outputText value="AUTOR" />
+							</center>
+							<h:panelGroup>
+
+								<h:outputText id="presentadorEV"
+									value="#{articulos.aticuloinfo.emp_1.nom}"
+									style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " />
+								<p:spacer height="5px" width="10px" />
+								<h:outputText id="apellidorEV"
+									value="#{articulos.aticuloinfo.emp_1.apel}"
+									style="FONT-WEIGHT: bold; FONT-FAMILY: arial; FONT-SIZE: 12px; " />
+							</h:panelGroup>
+
+
+
+						</center>
+					</p:panel>
+					<center>
+						<p:panel header=" Lista de Revisores Asignados para este Artículo"
+							styleClass="myPanelCentrado">
+							<p:dataTable id="revisoresDataTableAsig" rows="10"
+								var="revisoresAsig"
+								emptyMessage="No existen revisores asignados para este artículo"
+								value="#{articulos.listarevisores}">
+
+								<p:column width="250">
+									<f:facet name="header">
+										<h:outputText value="Nombre del Revisor" />
+									</f:facet>
+									<h:outputText id="nombreRevAsig"
+										value="#{revisoresAsig.revisor.nombres}" />
+									<p:spacer width="5px" height="10px"></p:spacer>
+									<h:outputText id="apelRevAsig"
+										value="#{revisoresAsig.revisor.apellidos}" />
+								</p:column>
+
+								<p:column width="150">
+									<f:facet name="header">
+										<h:outputText value="Fecha Asignación" />
+									</f:facet>
+									<h:outputText id="fechaAsigRevAsig"
+										value="#{revisoresAsig.fechaAsignacion}">
+										<f:convertDateTime pattern="dd-MM-yyyy" />
+									</h:outputText>
+								</p:column>
+								<p:column width="150">
+									<f:facet name="header">
+										<h:outputText value="Fecha Máxima Revisión" />
+									</f:facet>
+									<h:outputText id="fechaMaxRevAsig"
+										value="#{revisoresAsig.fechamaxrev}">
+										<f:convertDateTime pattern="dd-MM-yyyy" />
+									</h:outputText>
+								</p:column>
+
+								<p:column width="100">
+									<f:facet name="header">
+										<h:outputText value="Email" />
+									</f:facet>
+									<h:outputText id="emailRevAsig"
+										value="#{revisoresAsig.revisor.email}" />
+								</p:column>
+
+							</p:dataTable>
+
+						</p:panel>
+
+						<center>
+							<h:panelGrid columns="1">
+								<h:panelGroup>
+
+									<p:spacer width="5" height="5"></p:spacer>
+									<p:commandLink oncomplete="consultarRevisorD.hide(); "
+										update="@this">
+										<p:graphicImage value="/images/ATRAS.png" title="Atrás"
+											width="36" height="35" />
+									</p:commandLink>
+								</h:panelGroup>
+							</h:panelGrid>
+
+						</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</center>
+
+
+
+				</h:form>
+
+
+			</p:dialog>
+
+
+		</center>
+
+	</ui:define>
+</ui:composition>

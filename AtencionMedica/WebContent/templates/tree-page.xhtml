@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition>
+	<rich:toolbar height="26" itemSeparator="grid">Menú de Opciones</rich:toolbar>
+	<h:form id="treeForm">
+		<rich:tree value="#{sesionUsuario.nodoRaiz}" var="node"
+			nodeType="#{node.type}" toggleType="client" selectionType="ajax">
+			<rich:treeNode type="branch" iconCollapsed="/images/iconFolder.gif"
+				iconExpanded="/images/iconFolder.gif" styleClass="myNode" expanded="#{true}">
+				<h:outputText value="#{node.data.nombre}" />
+			</rich:treeNode>
+			<rich:treeNode type="leaf" iconLeaf="/images/link_icon.gif" styleClass="myNode">
+				<a href="#{node.data.urlCompleto}"> 
+					<h:outputText value="#{node.data.nombre}" />
+				</a>
+			</rich:treeNode>
+		</rich:tree>
+	</h:form>
+
+</ui:composition>
+
+</html>

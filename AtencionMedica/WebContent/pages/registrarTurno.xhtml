@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<ui:composition template="/templates/common.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:v="http://validators.epn.edu.ec.com">
+      
+<ui:define name="pageTitle">RegistrarTurno</ui:define>
+<ui:define name="body">
+	<h:form id="formRegistrarTurno">
+	<center style="display: block; text-align: -webkit-center;">
+			<h:form>
+				<h:panelGrid style="border:1px solid #CAD6E0;" columns="1">
+					<p:commandLink onclick="dlgTurno.show()"
+						ajax="true">
+						<p:graphicImage value="/images/NUEVO3.png"  title="NUEVO TURNO"/>
+					</p:commandLink>
+				</h:panelGrid>
+			</h:form>
+	</center>
+	<p:panel header="Turnos Registrados">
+							<p:dataTable id="dgridTurnosRegistrados" paginator="true"
+								rows="10"
+								paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								value="" var="art"
+								paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5,10"
+								emptyMessage="" paginatorPosition="bottom">
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="CI" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Apellidos" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Nombres" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+                                <p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="HCL" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Especialidad" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Doctor" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+                                    <p:commandLink id="Editar"			>
+											<p:graphicImage value="/images/editar.jpg" title="Guardar"
+											width="20" height="20"/>
+									  </p:commandLink>	
+									  <p:spacer width="25" height="15" />
+									  <p:commandLink id="Cancelar"			>
+											<p:graphicImage value="/images/cancelSelection.png" title="Cancelar"
+											width="20" height="20"/>
+									  </p:commandLink>	   
+                                      
+                                </p:column>
+                   </p:dataTable>
+
+			  </p:panel>
+	    </h:form>
+	
+	<p:spacer width="10" height="10" />
+	
+	<h:form id="formAsignarTurno">
+			<div align="center">
+			<p:dialog id="dialogRegTurno" widgetVar="dlgTurno" modal="true">
+				<p:panel header="REGISTRAR TURNO" style="width:760px" >
+					
+						<p:spacer width="10" height="10" />
+					    <h:panelGrid columns="3">
+								<h:outputText value="Paciente:  " style="FONT-WEIGHT: bold;"/>
+												    			
+								<h:inputText id="apellido"
+								value="Apellidos" size="15"
+								required="true"  />
+								
+								<h:inputText id="nombre"
+								value="Nombres" size="15"
+								required="true"  />
+						</h:panelGrid>
+					
+						<p:spacer width="10" height="10" />
+					
+						<h:panelGrid columns ="2">
+						        <p:outputLabel for="console" value="Especialidad:" style="FONT-WEIGHT: bold;" />
+						        <p:selectOneMenu id="console" value="#{selectOneMenuView.console}">
+						            <f:selectItem itemLabel="Medicina General" itemValue="Medicina General" />
+						            <f:selectItem itemLabel="Ginecología" itemValue="Ginecología" />
+						            <f:selectItem itemLabel="Psicología" itemValue="Psicología" />
+						            <f:selectItem itemLabel="Nutrición y Dietética" itemValue="Nutrición y Dietética" />
+						            <f:selectItem itemLabel="Odontología" itemValue="Odontología" />
+						        </p:selectOneMenu>
+						        <p:outputLabel for="console1" value="Médico:" style="FONT-WEIGHT: bold;" />
+						        <p:selectOneMenu id="console1" value="#{selectOneMenuView.console}">
+						            <f:selectItem itemLabel="Medico 1" itemValue="Med1" />
+						            <f:selectItem itemLabel="Medico 2" itemValue="Med2" />
+						        </p:selectOneMenu>
+								<h:outputText value="Fecha : " style="FONT-WEIGHT: bold;"/>
+								<h:inputText id="fecha"
+									value="" size="18"
+									required="true" readonly="true" />
+								 
+								<h:outputText value="Hora : " style="FONT-WEIGHT: bold;"/>
+								<h:inputText id="hora"
+									value="" size="18"
+									required="true" readonly="true" />
+					 
+						</h:panelGrid>
+					
+					 	<p:spacer width="25" height="15" />
+					 
+						 <h:panelGrid columns="5">
+							 <center>
+								 <h:panelGroup>	
+							  		  <p:commandLink  onclick="dlgPacR.show()"  ajax="true">
+										 <p:graphicImage value="/images/buscar6.png" title="Buscar Paciente" />
+									  </p:commandLink>
+									  <p:spacer width="25" height="15" />
+									  <p:commandLink id="Guardar"			>
+											<p:graphicImage value="/images/guardar.png" title="Guardar"
+											width="32" height="32"/>
+									  </p:commandLink>	
+									  <p:spacer width="25" height="15" />
+									  <p:commandLink id="Cancelar"			>
+											<p:graphicImage value="/images/cancelar.gif" title="Cancelar"
+											width="32" height="32"/>
+									  </p:commandLink>	
+								 </h:panelGroup>	
+							 </center>	
+						 </h:panelGrid>
+				</p:panel>
+				</p:dialog>
+	        </div>    
+	   </h:form>
+	<p:dialog id="dialogPacReg" widgetVar="dlgPacR" modal="true">
+		<h:form id="formPacR">
+			<div align="center">
+				<p:panel header="CONSULTAR PACIENTE" style="width:760px">
+					<h:panelGrid columns="2">
+						<h:outputText value="CI:  " style="FONT-WEIGHT: bold;" align="left" />
+						<h:inputText id="cedula2"
+							value="" size="20"
+							required="true" />
+							
+						<h:outputText value="Apellidos:  " style="FONT-WEIGHT: bold;"/>
+					    <h:inputText id="apellido"
+							value="" size="20"
+							required="true" />
+						
+						
+					</h:panelGrid>
+					 <center>
+					 <h:panelGroup>	
+					  <p:commandLink id="Buscar"
+						    update="dgridPacientesRegistrados">
+							<p:graphicImage value="/images/buscar6.png" title="Buscar"
+							width="32" height="32"/>
+					  </p:commandLink>	
+					 </h:panelGroup>	
+					 </center>	
+				</p:panel>
+			
+		 </div>	
+	   
+	    <p:panel header="Pacientes Registrados">
+							<p:dataTable id="dgridPacientesRegistrados" paginator="true"
+								rows="10"
+								paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								value="" var="art"
+								paginatorAlwaysVisible="true" rowsPerPageTemplate="3,5,10"
+								emptyMessage="" paginatorPosition="bottom">
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="CI" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Apellidos" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Nombres" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+                                <p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="HCL" />
+									</f:facet>
+									<h:outputText value="" />
+								</p:column>
+								<p:column width="80">
+									<f:facet name="header">
+										<h:outputText value="Acciones" />
+									</f:facet>
+                                       <p:commandLink 
+											action="Seleccionar"  oncomplete="dlgPacR.hide();"
+											ajax="true" >
+											<p:graphicImage value="/images/SELECCIONAR.ico" alt="SELECCIONAR"
+												title="Seleccionar"   width="20"
+												height="20" />
+										</p:commandLink>
+                                </p:column>
+                   </p:dataTable>
+
+			  </p:panel>
+	    </h:form>
+	 </p:dialog>   
+	
+	</ui:define>
+</ui:composition>

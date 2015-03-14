@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+	<deployment>
+		<dependencies>
+			<module name="org.richfaces" slot="4.2.2.Final">
+				<imports>
+					<include path="**" />
+				</imports>
+			</module>
+			<module name="org.primefaces" meta-inf="export">
+				<imports>
+					<include path="META-INF" />
+				</imports>
+			</module>
+			<module name="deployment.ServiciosSeguridadEPN.jar"/>
+			<module name="deployment.ServiciosArticulosEPN.jar"/>
+			<module name="deployment.ServiciosRRHHEPN.jar"/>
+		</dependencies>
+	</deployment>
+</jboss-deployment-structure>

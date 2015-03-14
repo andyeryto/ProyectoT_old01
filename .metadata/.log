@@ -1,0 +1,1282 @@
+!SESSION 2014-09-03 12:21:07.095 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_EC
+Framework arguments:  -product com.jboss.jbds.product.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.jboss.jbds.product.product
+
+This is a continuation of log file C:\ProyectoT\.metadata\.bak_1.log
+Created Time: 2014-09-03 14:26:02.806
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.css/msg.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.css/extendedDataTable.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.css/notify.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.css/pickList.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.css/tree.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.css/accordion.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.css/collapsible-subtable.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/autocompleteButtonGradient.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/calendarButtonDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/chevronDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/fuBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/calendarSeparator.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/comboDisabledDownButton.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/spinnerDisabledArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/triangleLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.806
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/inputErrorIcon.png.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/chevronDownDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/triangleUpDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/dsBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/buttonHoverBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/calendarIcon.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/chevronDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/inplaceBtnPressGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/triangle.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/tabBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderSelectedArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/dotSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/buttonBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/leaf_icon.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/pmenu_bg_dis.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/pmenu_bg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/spinnerDisabledArrowTop.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/fuBtnDisGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.822
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/line.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/discDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/menuNodeImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/grid.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/triangleLeftDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/inplaceBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/plus.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/standardButtonBgImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/chevronLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/chevronUpDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/pbAniBg.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/minus.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/tabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/calendarButtonUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/squareSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/chevron.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/triangleDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderSelectedArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/actTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/gradientA.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/chevronLeftDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/triangleUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/inputBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/triangleDownDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/standardButtonPressedBgImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/tabLineBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderSelectedArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderDisabledArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/disc.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/insldrTrackGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/spinnerArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderDisabledArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/actRightTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/menu_item_bg.gif.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/autocompleteFieldGradient.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/comboDownButton.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/lineSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderDisabledArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/tabLineBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/chevronUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/dsBtnGradOver.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/sliderArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/actTabBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/gridSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/triangleDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/buttonDisabledBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/node_icon.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/actLeftTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/dsDigGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/menu_list_bg.gif.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/colHdrGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/last.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.837
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/gridDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/spinnerArrowTop.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/wine/org.richfaces.images/disabledCalendarIcon.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/icons.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/tabPanel.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/panel.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/datatable.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/inplaceInput.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/log.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/indicator.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/datagrid.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/contextmenu.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/Autocomplete.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/select.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/progressBar.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/datascroller.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/collapsiblePanel.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/toolbar.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/inputNumberSpinner.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/calendar.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/dropdownmenu.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/panelMenu.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/inplaceSelect.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/tooltip.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/orderingList.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/popupPanel.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/fileupload.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/list.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/inputNumberSlider.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/msg.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/extendedDataTable.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/notify.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/pickList.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/tree.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/accordion.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.css/collapsible-subtable.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/autocompleteButtonGradient.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/calendarButtonDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/chevronDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/fuBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/calendarSeparator.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/comboDisabledDownButton.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/spinnerDisabledArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/triangleLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/inputErrorIcon.png.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/chevronDownDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/triangleUpDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/dsBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/buttonHoverBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/calendarIcon.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/chevronDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/inplaceBtnPressGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/triangle.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/tabBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.853
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderSelectedArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/dotSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/buttonBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/leaf_icon.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/pmenu_bg_dis.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/pmenu_bg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/spinnerDisabledArrowTop.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/fuBtnDisGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/line.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/discDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/menuNodeImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/grid.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/triangleLeftDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/inplaceBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/plus.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/standardButtonBgImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/chevronLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/chevronUpDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/pbAniBg.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/minus.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/tabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/calendarButtonUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/squareSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/chevron.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/triangleDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderSelectedArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/actTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/gradientA.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/chevronLeftDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/triangleUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/inputBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/triangleDownDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/standardButtonPressedBgImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/tabLineBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderSelectedArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderDisabledArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/disc.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/insldrTrackGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/spinnerArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderDisabledArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/actRightTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/menu_item_bg.gif.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/autocompleteFieldGradient.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/comboDownButton.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/lineSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderDisabledArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/tabLineBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/chevronUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/dsBtnGradOver.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/sliderArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/actTabBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/gridSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/triangleDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/buttonDisabledBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/node_icon.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/actLeftTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/dsDigGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/menu_list_bg.gif.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/colHdrGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/last.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/gridDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.869
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/spinnerArrowTop.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/NULL/org.richfaces.images/disabledCalendarIcon.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/icons.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/tabPanel.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/panel.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/datatable.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/inplaceInput.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/log.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/indicator.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/datagrid.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/contextmenu.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/Autocomplete.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/select.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/progressBar.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/datascroller.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/collapsiblePanel.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/toolbar.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/inputNumberSpinner.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/calendar.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/dropdownmenu.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/panelMenu.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/inplaceSelect.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/tooltip.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/orderingList.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/popupPanel.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/fileupload.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/list.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/inputNumberSlider.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/msg.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/extendedDataTable.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/notify.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/pickList.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/tree.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/accordion.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.css/collapsible-subtable.css
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/autocompleteButtonGradient.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/calendarButtonDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/chevronDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/fuBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/calendarSeparator.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/comboDisabledDownButton.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/spinnerDisabledArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/triangleLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/inputErrorIcon.png.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/chevronDownDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/triangleUpDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/dsBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/buttonHoverBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/calendarIcon.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/chevronDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/inplaceBtnPressGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/triangle.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/tabBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderSelectedArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/dotSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/buttonBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/leaf_icon.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/pmenu_bg_dis.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/pmenu_bg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/spinnerDisabledArrowTop.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/fuBtnDisGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.884
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/line.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/discDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/menuNodeImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/grid.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/triangleLeftDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/inplaceBtnGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/plus.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/standardButtonBgImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/chevronLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/chevronUpDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/pbAniBg.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/minus.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/tabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/calendarButtonUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/squareSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/chevron.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/triangleDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderSelectedArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/actTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/gradientA.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/chevronLeftDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/triangleUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/inputBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/triangleDownDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/standardButtonPressedBgImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/tabLineBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderSelectedArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderDisabledArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/disc.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/insldrTrackGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/spinnerArrowBottom.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderDisabledArrowLeft.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/actRightTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/menu_item_bg.gif.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/autocompleteFieldGradient.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/comboDownButton.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/lineSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderDisabledArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/tabLineBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/chevronUp.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/dsBtnGradOver.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/sliderArrowRight.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/actTabBottomBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/gridSeparatorImage.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/triangleDown.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/buttonDisabledBackgroundImage.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/node_icon.gif
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/actLeftTabBg.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/dsDigGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/menu_list_bg.gif.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/colHdrGrad.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/last.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/gridDisabled.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/spinnerArrowTop.png
+
+!ENTRY org.eclipse.jst.jsf.core 1 0 2014-09-03 14:26:02.900
+!MESSAGE Ignoring invalid id: org.richfaces.staticResource/4.2.2.Final/Static/emeraldTown/org.richfaces.images/disabledCalendarIcon.png
+
+!ENTRY org.eclipse.wst.server.core 4 0 2014-09-03 15:26:40.163
+!MESSAGE Server JBoss 7.1 Runtime Server failed to start.
+!SESSION 2014-09-04 22:26:18.812 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_EC
+Framework arguments:  -product com.jboss.jbds.product.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.jboss.jbds.product.product
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2014-09-04 22:29:47.031
+!MESSAGE Could not load repository template extension contributed by org.jboss.tools.common.mylyn with connectorKind bugzilla
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2014-09-04 22:29:47.062
+!MESSAGE Could not load repository template extension contributed by org.jboss.tools.common.mylyn with connectorKind jira
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2014-09-04 22:29:47.781
+!MESSAGE No search provider was registed. Tasks search is not available.
+
+!ENTRY org.eclipse.jface 2 0 2014-09-04 22:30:46.312
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-09-04 22:30:46.312
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.osgi 2 1 2014-09-04 22:33:15.734
+!MESSAGE NLS missing message: CANNOT_FIND_FACELET_TAGLIB in: org.eclipse.jst.jsf.core.validation.internal.facelet.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-09-04 22:46:04.953
+!MESSAGE NLS unused message: NewHibernateMappingElementsSelectionPage_select in: org.hibernate.eclipse.jdt.ui.internal.JdtUiMessages
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2014-09-04 22:47:05.203
+!MESSAGE Incremental publish failed for module ServiciosRRHHEPN
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-09-04 22:47:05.203
+!MESSAGE Could not delete /META-INF. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-09-04 22:47:05.203
+!MESSAGE Could not delete /ec/edu/epn/rrhh/entities. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-09-04 22:47:05.203
+!MESSAGE Could not delete /ec/edu/epn/rrhh/servicio/bean. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-09-04 22:47:05.203
+!MESSAGE Could not delete /ec/edu/epn/rrhh/servicio. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-09-04 22:47:05.203
+!MESSAGE Could not delete /ec/edu/epn/rrhh. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-09-04 22:47:05.203
+!MESSAGE Could not delete /ec/edu/epn. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-09-04 22:47:05.203
+!MESSAGE Could not delete /ec/edu. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-09-04 22:47:05.203
+!MESSAGE Could not delete /ec. May be locked by another process.
+
+!ENTRY org.eclipse.core.jobs 4 2 2014-09-04 22:47:07.296
+!MESSAGE An internal error occurred during: "Starting JBoss 7.1 Runtime Server".
+!STACK 0
+java.lang.NullPointerException
+	at org.jboss.ide.eclipse.as.core.server.internal.DelegatingServerBehavior.setModulesStopped(DelegatingServerBehavior.java:115)
+	at org.jboss.ide.eclipse.as.core.server.internal.DelegatingServerBehavior.setModulesStopped(DelegatingServerBehavior.java:118)
+	at org.jboss.ide.eclipse.as.core.server.internal.DelegatingServerBehavior.setServerStopped(DelegatingServerBehavior.java:111)
+	at org.jboss.ide.eclipse.as.core.server.internal.v7.DelegatingJBoss7ServerBehavior.setServerStopped(DelegatingJBoss7ServerBehavior.java:153)
+	at org.jboss.ide.eclipse.as.core.server.internal.launch.AbstractJBossStartLaunchConfiguration.preLaunchCheck(AbstractJBossStartLaunchConfiguration.java:70)
+	at org.jboss.ide.eclipse.as.core.server.internal.v7.LocalJBoss7StartLaunchDelegate.preLaunchCheck(LocalJBoss7StartLaunchDelegate.java:38)
+	at org.jboss.ide.eclipse.as.core.server.internal.launch.DelegatingStartLaunchConfiguration.preLaunchCheck(DelegatingStartLaunchConfiguration.java:67)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:809)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:696)
+	at org.eclipse.wst.server.core.internal.Server.startImpl2(Server.java:3462)
+	at org.eclipse.wst.server.core.internal.Server.startImpl(Server.java:3400)
+	at org.eclipse.wst.server.core.internal.Server$StartJob.run(Server.java:367)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jst.jsf.core 4 0 2014-09-05 01:08:25.437
+!MESSAGE Checkpointing JSP tags failed
+!STACK 0
+java.io.FileNotFoundException: C:\ProyectoT\.metadata\.plugins\org.eclipse.jst.jsf.core\.jsptagregistry\Project_AtencionMedica_7290c584.idx (El sistema no puede hallar la ruta especificada)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.persistence.MasterIndex$ProjectIndex.save(MasterIndex.java:379)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.persistence.TagRepository.save(TagRepository.java:83)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.persistence.PersistedDataTagStrategy.save(PersistedDataTagStrategy.java:157)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDTagRegistry.checkpoint(TLDTagRegistry.java:153)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDRegistryManager$MyWorkspaceSaveParticipant.saveProject(TLDRegistryManager.java:232)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDRegistryManager$MyWorkspaceSaveParticipant.saving(TLDRegistryManager.java:196)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:383)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:192)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:195)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1130)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2375)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.jst.jsf.core 4 0 2014-09-05 01:08:25.531
+!MESSAGE Checkpointing JSP tags failed
+!STACK 0
+java.io.FileNotFoundException: D:\WS_Polimedweb\.metadata\.plugins\org.eclipse.jst.jsf.core\.jsptagregistry\Project_RevistaPolitecnica_42b314eb.idx (El sistema no puede hallar la ruta especificada)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.persistence.MasterIndex$ProjectIndex.save(MasterIndex.java:379)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.persistence.TagRepository.save(TagRepository.java:83)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.persistence.PersistedDataTagStrategy.save(PersistedDataTagStrategy.java:157)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDTagRegistry.checkpoint(TLDTagRegistry.java:153)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDRegistryManager$MyWorkspaceSaveParticipant.saveProject(TLDRegistryManager.java:232)
+	at org.eclipse.jst.jsf.designtime.internal.view.model.jsp.registry.TLDRegistryManager$MyWorkspaceSaveParticipant.saving(TLDRegistryManager.java:196)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:383)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:192)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:195)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1130)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2375)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SESSION 2014-09-09 10:17:36.328 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_EC
+Framework arguments:  -product com.jboss.jbds.product.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.jboss.jbds.product.product
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2014-09-09 10:21:58.171
+!MESSAGE Could not load repository template extension contributed by org.jboss.tools.common.mylyn with connectorKind bugzilla
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2014-09-09 10:21:58.203
+!MESSAGE Could not load repository template extension contributed by org.jboss.tools.common.mylyn with connectorKind jira
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2014-09-09 10:21:58.687
+!MESSAGE No search provider was registed. Tasks search is not available.
+
+!ENTRY org.eclipse.jface 2 0 2014-09-09 10:22:41.953
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-09-09 10:22:41.953
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.datatools.sqltools.schemaobjecteditor.ui 4 0 2014-09-09 10:29:19.531
+!MESSAGE Improper editor input
+
+!ENTRY org.eclipse.ui 4 0 2014-09-09 10:29:19.687
+!MESSAGE Unable to create editor ID org.eclipse.datatools.sqltools.schemaobjecteditor.editor: An unexpected exception was thrown.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.datatools.sqltools.schemaobjecteditor.ui.core.SchemaObjectEditor.pageChange(SchemaObjectEditor.java:466)
+	at org.eclipse.ui.part.MultiPageEditorPart.setActivePage(MultiPageEditorPart.java:1067)
+	at org.eclipse.ui.forms.editor.FormEditor.setActivePage(FormEditor.java:603)
+	at org.eclipse.datatools.sqltools.schemaobjecteditor.ui.core.SchemaObjectEditor.setActivePage(SchemaObjectEditor.java:756)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:352)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:670)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2945)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2850)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2842)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2793)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2789)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2773)
+	at org.eclipse.ui.actions.OpenWithMenu.openEditor(OpenWithMenu.java:331)
+	at org.eclipse.ui.actions.OpenWithMenu$3.handleEvent(OpenWithMenu.java:215)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4165)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3754)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 2 2 2014-09-09 10:29:19.812
+!MESSAGE Ignored attempt to add saveable that was already registered
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse.ui.internal.DefaultSaveable@3d191d from part: org.eclipse.ui.internal.ErrorEditorPart@3d191d
+	at org.eclipse.ui.internal.SaveablesList.logWarning(SaveablesList.java:187)
+	at org.eclipse.ui.internal.SaveablesList.addModel(SaveablesList.java:117)
+	at org.eclipse.ui.internal.SaveablesList.addModels(SaveablesList.java:289)
+	at org.eclipse.ui.internal.SaveablesList.postOpen(SaveablesList.java:695)
+	at org.eclipse.ui.internal.PartList.partOpened(PartList.java:234)
+	at org.eclipse.ui.internal.PartList.access$0(PartList.java:210)
+	at org.eclipse.ui.internal.PartList$1.propertyChanged(PartList.java:40)
+	at org.eclipse.ui.internal.WorkbenchPartReference.fireInternalPropertyChange(WorkbenchPartReference.java:375)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:610)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2945)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2850)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2842)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2793)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2789)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2773)
+	at org.eclipse.ui.actions.OpenWithMenu.openEditor(OpenWithMenu.java:331)
+	at org.eclipse.ui.actions.OpenWithMenu$3.handleEvent(OpenWithMenu.java:215)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4165)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3754)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.core.resources 4 2 2014-09-09 13:14:52.750
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.core.Activator.getPluginId(Activator.java:72)
+	at org.eclipse.egit.core.Activator$AutoShareProjects.doAutoShare(Activator.java:201)
+	at org.eclipse.egit.core.Activator$AutoShareProjects.access$0(Activator.java:199)
+	at org.eclipse.egit.core.Activator$AutoShareProjects$1.visit(Activator.java:215)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at org.eclipse.egit.core.Activator$AutoShareProjects.resourceChanged(Activator.java:211)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Marker.delete(Marker.java:71)
+	at org.eclipse.debug.core.model.Breakpoint.delete(Breakpoint.java:117)
+	at org.eclipse.wst.jsdt.debug.internal.core.JavaScriptPreferencesManager.stop(JavaScriptPreferencesManager.java:113)
+	at org.eclipse.wst.jsdt.debug.internal.core.JavaScriptDebugPlugin.stop(JavaScriptDebugPlugin.java:187)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:565)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1161)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:595)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:691)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:598)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:390)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
